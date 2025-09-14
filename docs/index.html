@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketrip - ALL About Travel Ticket</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Italian Renaissance Color Palette */
+            --tuscan-red: #A0522D;
+            --renaissance-gold: #DAA520;
+            --marble-white: #F5F5DC;
+            --florentine-green: #228B22;
+            --uffizi-brown: #8B4513;
+            --art-blue: #4682B4;
+
+            /* Background Gradients */
+            --hero-gradient: linear-gradient(135deg, #DAA520 0%, #F5F5DC 25%, #A0522D 50%, #8B4513 75%, #228B22 100%);
+            --page-gradient: linear-gradient(180deg, #FDF5E6 0%, #F5F5DC 50%, #FAEBD7 100%);
+
+            /* Text Colors */
+            --text-primary: #263238;
+            --text-secondary: #455A64;
+            --text-light: #FFFFFF;
+            --text-accent: #1565C0;
+
+            /* Light Glassmorphism */
+            --glass-ultra-light: rgba(255, 255, 255, 0.15);
+            --glass-light: rgba(255, 255, 255, 0.25);
+            --glass-medium: rgba(255, 255, 255, 0.35);
+            --glass-heavy: rgba(255, 255, 255, 0.45);
+            --glass-dropdown: rgba(255, 255, 255, 0.9);
+
+            --glass-border-light: rgba(255, 255, 255, 0.3);
+            --glass-border-medium: rgba(255, 255, 255, 0.4);
+
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.2);
+            --shadow-heavy: rgba(0, 0, 0, 0.4);
+
+            --section-padding: 100px 0;
+            --container-max-width: 1440px;
+            --border-radius-sm: 12px;
+            --border-radius-md: 16px;
+            --border-radius-lg: 24px;
+            --border-radius-xl: 32px;
+            --border-radius-2xl: 48px;
+
+            --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--page-gradient);
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Enhanced Glassmorphism Effects */
+        .glass-ultra-light {
+            background: var(--glass-ultra-light);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border-light);
+            box-shadow: 0 8px 32px var(--shadow-light);
+        }
+
+        .glass-light {
+            background: var(--glass-light);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--glass-border-light);
+            box-shadow: 0 12px 40px var(--shadow-light);
+        }
+
+        .glass-medium {
+            background: var(--glass-medium);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+            border: 1px solid var(--glass-border-medium);
+            box-shadow: 0 16px 48px var(--shadow-medium);
+        }
+
+        .glass-heavy {
+            background: var(--glass-heavy);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-border-medium);
+            box-shadow: 0 20px 60px var(--shadow-medium);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            padding: 8px 0;
+        }
+
+        .header.scrolled {
+            background: var(--dark-surface-primary);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border-bottom: 1px solid var(--glass-border-light);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            color: var(--primary-cyan);
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition-smooth);
+            padding: 8px 16px;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+            background: var(--glass-ultra-light);
+            transform: translateY(-2px);
+        }
+
+        .language-switcher {
+            position: relative;
+        }
+
+        .language-btn {
+            background: var(--glass-light);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border-light);
+            padding: 8px 16px;
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .language-btn:hover {
+            background: var(--glass-medium);
+            transform: translateY(-2px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 8px;
+            background: var(--glass-dropdown);
+            backdrop-filter: blur(32px);
+            -webkit-backdrop-filter: blur(32px);
+            border: 1px solid var(--glass-border-medium);
+            border-radius: var(--border-radius-md);
+            padding: 8px;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: var(--transition-smooth);
+            box-shadow: 0 16px 48px var(--shadow-medium);
+        }
+
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            transition: var(--transition-smooth);
+        }
+
+        .language-option:hover {
+            color: var(--text-primary);
+            background: var(--glass-light);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--tuscan-red), var(--renaissance-gold));
+            color: var(--text-light);
+            padding: 12px 24px;
+            border-radius: var(--border-radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(30, 136, 229, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(30, 136, 229, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-primary);
+            position: relative;
+            overflow: hidden;
+            padding-top: 120px; /* Add padding to prevent header overlap */
+            background: linear-gradient(rgba(135, 206, 235, 0.1), rgba(30, 136, 229, 0.2)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:%2387CEEB;stop-opacity:1" /><stop offset="100%" style="stop-color:%23E3F2FD;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23sky)"/><polygon points="400,450 450,350 500,450" fill="%23A5A5A5" opacity="0.3"/><polygon points="450,350 500,250 550,350" fill="%23B0B0B0" opacity="0.3"/><polygon points="600,500 700,300 800,500" fill="%238D7053" opacity="0.4"/><polygon points="700,300 750,200 800,300" fill="%23A68B5B" opacity="0.4"/><polygon points="720,350 730,300 740,350" fill="%23654321" opacity="0.6"/><polygon points="730,340 740,320 750,340" fill="%23654321" opacity="0.6"/><circle cx="200" cy="150" r="60" fill="%23FFFFFF" opacity="0.8"/><circle cx="300" cy="120" r="40" fill="%23FFFFFF" opacity="0.6"/><circle cx="900" cy="180" r="50" fill="%23FFFFFF" opacity="0.7"/></svg>') center/cover;
+            background-attachment: fixed;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--hero-gradient);
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            font-weight: 900;
+            margin-bottom: 32px;
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, var(--tuscan-red) 0%, var(--renaissance-gold) 50%, var(--uffizi-brown) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(18px, 3vw, 28px);
+            font-weight: 400;
+            margin-bottom: 48px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .hero-button {
+            padding: 16px 32px;
+            border-radius: var(--border-radius-xl);
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+            min-width: 160px;
+            text-align: center;
+        }
+
+        .primary-button {
+            background: linear-gradient(135deg, var(--tuscan-red), var(--renaissance-gold));
+            color: var(--text-light);
+            box-shadow: 0 12px 32px rgba(160, 82, 45, 0.2);
+        }
+
+        .primary-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 48px rgba(160, 82, 45, 0.3);
+        }
+
+        .secondary-button {
+            background: var(--glass-medium);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border-medium);
+        }
+
+        .secondary-button:hover {
+            background: var(--glass-heavy);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 40px var(--shadow-light);
+        }
+
+        .download-section {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-link {
+            background: var(--glass-light);
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: var(--border-radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-border-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .download-link:hover {
+            background: var(--glass-medium);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px var(--shadow-light);
+        }
+
+        /* Tour Packages */
+        .tour-packages {
+            padding: var(--section-padding);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .package-card {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-border-light);
+            position: relative;
+        }
+
+        .package-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: var(--glass-medium);
+            box-shadow: 0 24px 64px var(--shadow-medium);
+        }
+
+        .package-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .package-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .package-card:hover .package-image img {
+            transform: scale(1.1);
+        }
+
+        .package-content {
+            padding: 24px;
+        }
+
+        .package-location {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--tuscan-red);
+            margin-bottom: 12px;
+        }
+
+        .package-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .package-card p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .package-price {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--florentine-green);
+            text-align: right;
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .feature-card {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-xl);
+            padding: 40px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--glass-ultra-light) 0%, transparent 100%);
+            border-radius: var(--border-radius-xl);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: var(--glass-medium);
+            box-shadow: 0 24px 64px var(--shadow-medium);
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--tuscan-red), var(--renaissance-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 32px;
+            color: var(--text-light);
+            box-shadow: 0 12px 32px rgba(160, 82, 45, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 16px 40px rgba(30, 136, 229, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Calculator Section */
+        .calculator {
+            padding: var(--section-padding);
+            position: relative;
+        }
+
+        .calculator-container {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-2xl);
+            padding: 48px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: 0 20px 60px var(--shadow-medium);
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 16px;
+            border: 1px solid var(--glass-border-light);
+            border-radius: var(--border-radius-md);
+            font-size: 16px;
+            background: var(--glass-ultra-light);
+            color: var(--text-primary);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: var(--transition-smooth);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--bavarian-blue);
+            background: var(--glass-light);
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-tertiary);
+        }
+
+        .price-display {
+            background: var(--glass-medium);
+            padding: 32px;
+            border-radius: var(--border-radius-xl);
+            text-align: center;
+            border: 1px solid var(--glass-border-medium);
+            box-shadow: 0 16px 48px var(--shadow-light);
+        }
+
+        .price-display h3 {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .total-price {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .price-breakdown {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .price-breakdown div {
+            margin-bottom: 6px;
+        }
+
+        .cheap-highlight {
+            color: var(--florentine-green);
+            font-weight: 600;
+        }
+
+        /* Travel Guide Section */
+        .travel-guide {
+            padding: var(--section-padding);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .guide-container {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-2xl);
+            padding: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid var(--glass-border-light);
+            box-shadow: 0 20px 60px var(--shadow-medium);
+        }
+
+        .route-info h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .route-card {
+            background: var(--glass-ultra-light);
+            border: 1px solid var(--glass-border-light);
+            border-radius: var(--border-radius-xl);
+            padding: 24px;
+            transition: var(--transition-smooth);
+        }
+
+        .route-card:hover {
+            background: var(--glass-medium);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px var(--shadow-light);
+        }
+
+        .route-card.highlight {
+            background: linear-gradient(135deg, var(--renaissance-gold) 0%, var(--marble-white) 100%);
+            border: 2px solid var(--tuscan-red);
+        }
+
+        .route-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .station-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .station-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--glass-light);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .station-item.intermediate {
+            background: var(--glass-ultra-light);
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .station-code {
+            background: var(--tuscan-red);
+            color: var(--text-light);
+            padding: 4px 8px;
+            border-radius: var(--border-radius-sm);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: monospace;
+        }
+
+        .station-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .route-arrow {
+            text-align: center;
+            font-size: 20px;
+            color: var(--tuscan-red);
+            margin: 4px 0;
+        }
+
+        .route-details,
+        .walking-guide {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .detail-item,
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 12px;
+            background: var(--glass-ultra-light);
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .step-number {
+            background: var(--florentine-green);
+            color: var(--text-light);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .walking-time {
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--florentine-green);
+            color: var(--text-light);
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tip-highlight {
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--tuscan-red);
+            color: var(--text-light);
+            border-radius: var(--border-radius-md);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Trust Builders */
+        .trust-builders {
+            padding: var(--section-padding);
+            text-align: center;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .trust-card {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-xl);
+            padding: 32px;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .trust-card:hover {
+            transform: translateY(-6px);
+            background: var(--glass-medium);
+        }
+
+        .trust-stat {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .trust-description {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: var(--section-padding);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .testimonial-card {
+            background: var(--glass-light);
+            border-radius: var(--border-radius-xl);
+            padding: 32px;
+            transition: var(--transition-smooth);
+            border: 1px solid var(--glass-border-light);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            background: var(--glass-medium);
+        }
+
+        .stars {
+            color: var(--sunshine-gold);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .testimonial-author {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* Lead Magnet */
+        .lead-magnet {
+            padding: var(--section-padding);
+            text-align: center;
+        }
+
+        .magnet-card {
+            background: var(--glass-medium);
+            border-radius: var(--border-radius-2xl);
+            padding: 48px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid var(--glass-border-medium);
+            box-shadow: 0 24px 64px var(--shadow-medium);
+        }
+
+        .magnet-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .magnet-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .magnet-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .download-button {
+            background: linear-gradient(135deg, var(--florentine-green), var(--tuscan-red));
+            color: var(--text-light);
+            padding: 16px 32px;
+            border-radius: var(--border-radius-xl);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px;
+            transition: var(--transition-smooth);
+            display: inline-block;
+            box-shadow: 0 12px 32px rgba(34, 139, 34, 0.2);
+        }
+
+        .download-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 48px rgba(34, 139, 34, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--glass-medium);
+            border: 1px solid var(--glass-border-light);
+            padding: 64px 0 32px;
+            border-radius: var(--border-radius-2xl) var(--border-radius-2xl) 0 0;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-size: 15px;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--text-primary);
+            transform: translateX(4px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--glass-border-light);
+            padding-top: 24px;
+            text-align: center;
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .calculator-container,
+            .guide-container,
+            .magnet-card {
+                padding: 32px 24px;
+            }
+
+            .calculator-form,
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .guide-container {
+                padding: 24px 16px;
+                margin: 0 8px;
+            }
+
+            .route-card h4 {
+                font-size: 16px;
+            }
+
+            .route-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s var(--transition-smooth);
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--glass-border-medium);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--glass-border-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <img src="./logo.png" alt="Ticketrip Logo" style="width: 32px; height: 32px; border-radius: 8px;" />
+                <span>Ticketrip - ALL About Travel Ticket</span>
+            </a>
+
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#features" data-lang="nav-features">Features</a></li>
+                    <li><a href="#packages" data-lang="nav-packages">Tours</a></li>
+                    <li><a href="#calculator" data-lang="nav-pricing">Pricing</a></li>
+                    <li><a href="#testimonials" data-lang="nav-reviews">Reviews</a></li>
+                    <li><a href="#download" data-lang="nav-download">Download</a></li>
+                </ul>
+
+                <div class="language-switcher">
+                    <button class="language-btn" onclick="toggleLanguageDropdown()">
+                        <span id="current-lang">🇺🇸 EN</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="language-dropdown" id="language-dropdown">
+                        <a href="#" class="language-option" onclick="changeLanguage('en')">🇺🇸 English</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('zh-tw')">🇹🇼 繁體中文</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('vi')">🇻🇳 Tiếng Việt</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('ko')">🇰🇷 한국어</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('tl')">🇵🇭 Filipino</a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/garyyang01/KTV-BTS/releases/download/v0.1.0/app-release.apk" class="cta-button" data-lang="nav-cta">Download Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in-up" data-lang="hero-title">Travel at Ease!</h1>
+                <p class="hero-subtitle fade-in-up stagger-1" data-lang="hero-subtitle">Your one-stop platform for European travel tickets and experiences.<br>Book trains, attractions, and tours with ease!</p>
+                <div class="hero-buttons fade-in-up stagger-2">
+                    <a href="#calculator" class="hero-button primary-button" data-lang="hero-calc">Calculate Price</a>
+                    <a href="#features" class="hero-button secondary-button" data-lang="hero-learn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-prop" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="features-title">Why Choose Ticketrip?</h2>
+                <p data-lang="features-subtitle">Fast, secure, and the most affordable way to book your European travel experiences</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon">💰</div>
+                    <h3 data-lang="feature-1-title">Best Prices</h3>
+                    <p data-lang="feature-1-desc">Compare prices across multiple providers to find the best deals on trains, attractions, and tours throughout Europe.</p>
+                </div>
+                <div class="feature-card fade-in-up stagger-1">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-lang="feature-2-title">Instant Booking</h3>
+                    <p data-lang="feature-2-desc">Book trains, attractions, and experiences instantly with immediate confirmation and mobile tickets.</p>
+                </div>
+                <div class="feature-card fade-in-up stagger-2">
+                    <div class="feature-icon">🚄</div>
+                    <h3 data-lang="feature-3-title">Seamless Travel</h3>
+                    <p data-lang="feature-3-desc">Plan your entire European journey with integrated train bookings, attraction tickets, and local experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Packages Section -->
+    <section class="tour-packages" id="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="packages-title">Popular Tour Packages</h2>
+                <p data-lang="packages-subtitle">Discover amazing travel experiences across Europe</p>
+            </div>
+            <div class="packages-grid">
+                <div class="package-card fade-in-up">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="Rome Tour" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=Rome+Tour'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇮🇹 Venice</div>
+                        <h3>Rome Independent Tour from Venice by High-Speed Train</h3>
+                        <p>A new Sightseeing tour with daily departure from Venice by round trip high speed train. Includes ticket to hop-op hop-off bus and a tour of the Vatican and Sistine Chapel with an expert guide.</p>
+                        <div class="package-price">€232</div>
+                    </div>
+                </div>
+                <div class="package-card fade-in-up stagger-1">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1543832923-44667a44c71c?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="Milan Turin Tour" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=Milan+Turin+Tour'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇮🇹 Turin</div>
+                        <h3>Milan Super Saver: Turin and Milan One-Day Highlights Tour</h3>
+                        <p>Visit two of northern Italy's top cities in a single day. From Milan, travel to Turin by high-speed train, and see sights such as Piazza San Carlo. Includes chocolate and gelato tasting.</p>
+                        <div class="package-price">€155</div>
+                    </div>
+                </div>
+                <div class="package-card fade-in-up stagger-2">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="Chartres Cathedral Tour" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=Chartres+Cathedral'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇫🇷 Chartres</div>
+                        <h3>Chartres and Its Cathedral: 5-Hour Tour from Paris</h3>
+                        <p>Visit the town of Chartres with a private driver and guide. The main attraction is Chartres Cathedral, a UNESCO World Heritage site famous for its French Gothic architecture.</p>
+                        <div class="package-price">€131</div>
+                    </div>
+                </div>
+                <div class="package-card fade-in-up">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="London Theater" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=London+Theater'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇬🇧 London</div>
+                        <h3>The Mousetrap Theater Show in London</h3>
+                        <p>Be part of theater history with a ticket to 'The Mousetrap' at St Martin's Theatre. Based on Agatha Christie's story, this murder mystery has been running for over 60 years.</p>
+                        <div class="package-price">€70</div>
+                    </div>
+                </div>
+                <div class="package-card fade-in-up stagger-1">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="London Rock Tour" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=London+Rock+Tour'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇬🇧 London</div>
+                        <h3>London Rock Music Bohemian Soho and North London Tour</h3>
+                        <p>Hit the bohemian neighborhoods including Soho and Camden Town as you delve into the city's rock 'n' roll past. Features The Beatles, Madness, The Clash and Jimmy Page.</p>
+                        <div class="package-price">€41</div>
+                    </div>
+                </div>
+                <div class="package-card fade-in-up stagger-2">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=640&h=426&fit=crop&crop=entropy&cs=tinysrgb" alt="DDR Museum Berlin" onerror="this.src='https://via.placeholder.com/640x426/4F96FF/ffffff?text=Berlin+Museum'" />
+                    </div>
+                    <div class="package-content">
+                        <div class="package-location">🇩🇪 Berlin</div>
+                        <h3>Skip the line: DDR Museum Berlin</h3>
+                        <p>Experience life in socialist East Germany with a trip to Berlin's award-winning DDR Museum. Interactive exhibits include authentic Trabi car and replicated East German apartment.</p>
+                        <div class="package-price">€12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Guide Section -->
+    <section class="travel-guide" id="travel-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="travel-guide-title">European Train Travel Made Easy</h2>
+                <p data-lang="travel-guide-subtitle">Discover how easy it is to travel across Europe by train and reach amazing destinations</p>
+            </div>
+            <div class="guide-container">
+                <div class="route-info">
+                    <h3 data-lang="route-info-title">🚂 Popular European Routes</h3>
+                    <div class="route-grid">
+                        <div class="route-card">
+                            <h4 data-lang="from-milan-title">From Milan</h4>
+                            <div class="station-list">
+                                <div class="station-item">
+                                    <span class="station-code">ST_L6NN3P6K</span>
+                                    <span class="station-name" data-lang="milan-station">Milano Centrale</span>
+                                </div>
+                                <div class="route-arrow">↓</div>
+                                <div class="station-item intermediate">
+                                    <span class="station-name" data-lang="intermediate-stations">Bologna Centrale (Optional stop)</span>
+                                </div>
+                                <div class="route-arrow">↓</div>
+                                <div class="station-item">
+                                    <span class="station-code">ST_DKRRM9Q4</span>
+                                    <span class="station-name" data-lang="florence-station">Firenze Santa Maria Novella</span>
+                                </div>
+                            </div>
+                            <div class="route-details">
+                                <div class="detail-item">
+                                    <span class="icon">⏱️</span>
+                                    <span data-lang="duration">Journey Time: ~2 hours</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="icon">🚄</span>
+                                    <span data-lang="train-type">High-Speed Trains Available</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-card">
+                            <h4 data-lang="from-station-title">From Train Station to City Center</h4>
+                            <div class="walking-guide">
+                                <div class="step-item">
+                                    <span class="step-number">1</span>
+                                    <span data-lang="step-1">Exit the main train station</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">2</span>
+                                    <span data-lang="step-2">Look for city center signs or tourist information</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">3</span>
+                                    <span data-lang="step-3">Take public transport or walk to main attractions</span>
+                                </div>
+                                <div class="step-item">
+                                    <span class="step-number">4</span>
+                                    <span data-lang="step-4">Use our app to navigate to your booked attractions</span>
+                                </div>
+                                <div class="walking-time">
+                                    <span class="icon">🚶‍♂️</span>
+                                    <span data-lang="walking-time">Average travel time: ~15-30 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="route-card highlight">
+                            <h4 data-lang="booking-tip-title">💡 Pro Tip</h4>
+                            <p data-lang="booking-tip">Book your European attraction tickets and train journeys in advance! Popular destinations often sell out, especially during peak tourist season (April-October).</p>
+                            <div class="tip-highlight">
+                                <span data-lang="advance-booking">🎫 Advance booking highly recommended</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="calc-title">Price Calculator</h2>
+                <p data-lang="calc-subtitle">Calculate your total cost with our transparent pricing - no hidden fees</p>
+            </div>
+            <div class="calculator-container">
+                <form class="calculator-form" id="priceCalculator">
+                    <div class="form-group">
+                        <label for="attraction" data-lang="calc-attraction">Attraction</label>
+                        <select id="attraction" name="attraction">
+                            <option value="neuschwanstein">Neuschwanstein Castle</option>
+                            <option value="uffizi">Uffizi Galleries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adults" data-lang="calc-adults">Adults (18+ years)</label>
+                        <input type="number" id="adults" name="adults" min="0" value="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="children" data-lang="calc-children">Children (Under 18)</label>
+                        <input type="number" id="children" name="children" min="0" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="date" data-lang="calc-date">Visit Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="time" data-lang="calc-time">Time Slot</label>
+                        <select id="time" name="time">
+                            <option value="09:00">09:00 - 10:30</option>
+                            <option value="11:00">11:00 - 12:30</option>
+                            <option value="13:00">13:00 - 14:30</option>
+                            <option value="15:00">15:00 - 16:30</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="price-display">
+                    <h3 data-lang="calc-total">Total Cost</h3>
+                    <div class="total-price" id="totalPrice">€38</div>
+                    <div class="price-breakdown">
+                        <div><span data-lang="calc-adult-tickets">Adult tickets:</span> <span id="adultTotal">€38</span> (2 × €19)</div>
+                        <div class="cheap-highlight"><span data-lang="calc-child-tickets">Child tickets:</span> <span id="childTotal">€0</span> (Free!)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Builders -->
+    <section class="trust-builders">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="trust-title">Trusted by Thousands</h2>
+                <p data-lang="trust-subtitle">Join over 20,000+ satisfied customers who chose our platform</p>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-stat">20,000+</div>
+                    <div class="trust-description" data-lang="trust-customers">Happy Customers</div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-stat">★★★★★</div>
+                    <div class="trust-description" data-lang="trust-rating">5-Star Rating</div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-stat">🔐</div>
+                    <div class="trust-description" data-lang="trust-secure">PCI-DSS Secure</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="testimonials-title">What Our Customers Say</h2>
+                <p data-lang="testimonials-subtitle">Real experiences from travelers who used our app</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-lang="testimonial-1">"The booking process was incredibly simple and we saved so much money on our European trip! The integrated train and attraction bookings made planning effortless."</p>
+                    <div class="testimonial-author" data-lang="testimonial-author-1">- Sarah Johnson, United States</div>
+                </div>
+                <div class="testimonial-card fade-in-up stagger-1">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-lang="testimonial-2">"User-friendly interface and lightning-fast payment process. Having all our tickets in one app - trains, museums, tours - made our trip so much easier."</p>
+                    <div class="testimonial-author" data-lang="testimonial-author-2">- Marco Rossi, Italy</div>
+                </div>
+                <div class="testimonial-card fade-in-up stagger-2">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-lang="testimonial-3">"Customer service responded quickly to our questions. The tour packages were amazing and great value. Highly recommend to anyone traveling in Europe!"</p>
+                    <div class="testimonial-author" data-lang="testimonial-author-3">- Emma Thompson, United Kingdom</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet -->
+    <section class="lead-magnet">
+        <div class="container">
+            <div class="magnet-card">
+                <div class="magnet-icon">📋</div>
+                <h3 class="magnet-title" data-lang="magnet-title">Free Travel Guide</h3>
+                <p class="magnet-description" data-lang="magnet-desc">Download our comprehensive "European Train Travel Guide" and discover the best routes, tips, and destinations across Europe.</p>
+                <a href="https://github.com/garyyang01/KTV-BTS/releases/download/v0.1.0/travel-guide.pdf" class="download-button" data-lang="magnet-cta">Download Free Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-store" id="download">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang="download-title">Download Our App Today</h2>
+                <p data-lang="download-subtitle">Get the latest version directly from our GitHub repository</p>
+            </div>
+            <div class="download-section">
+                <a href="https://github.com/garyyang01/KTV-BTS/releases/download/v0.1.0/app-release.apk" class="download-link">
+                    <span>📱</span>
+                    <span data-lang="download-latest">Download Latest Version</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-lang="footer-product">Product</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footer-app">Mobile App</a></li>
+                        <li><a href="#" data-lang="footer-web">Web Version</a></li>
+                        <li><a href="#" data-lang="footer-api">API Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang="footer-support">Support</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footer-faq">FAQ</a></li>
+                        <li><a href="#" data-lang="footer-contact">Contact Support</a></li>
+                        <li><a href="#" data-lang="footer-refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang="footer-company">Company</h4>
+                    <ul>
+                        <li><a href="#" data-lang="footer-about">About Us</a></li>
+                        <li><a href="#" data-lang="footer-privacy">Privacy Policy</a></li>
+                        <li><a href="#" data-lang="footer-terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-lang="footer-contact-title">Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@ktmv-tickets.com">📧 support@ktmv-tickets.com</a></li>
+                        <li><a href="tel:+49-8362-930830">📞 +49-8362-930830</a></li>
+                        <li><a href="#">💬 <span data-lang="footer-chat">Live Chat</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The K-T-M-V. <span data-lang="footer-rights">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Multi-language support
+        const translations = {
+            'en': {
+                'nav-features': 'Features',
+                'nav-pricing': 'Pricing',
+                'nav-trains': 'Trains',
+                'nav-reviews': 'Reviews',
+                'nav-download': 'Download',
+                'nav-cta': 'Download Now',
+                'hero-title': 'Travel at Ease!',
+                'hero-subtitle': 'Your one-stop platform for European travel tickets and experiences.<br>Book trains, attractions, and tours with ease!',
+                'hero-calc': 'Calculate Price',
+                'hero-learn': 'Learn More',
+                'download-app': 'Download App',
+                'view-releases': 'View All Releases',
+                'features-title': 'Why Choose Ticketrip?',
+                'features-subtitle': 'Fast, secure, and the most affordable way to book your European travel experiences',
+                'feature-1-title': 'Best Prices',
+                'feature-1-desc': 'Compare prices across multiple providers to find the best deals on trains, attractions, and tours throughout Europe.',
+                'feature-2-title': 'Instant Booking',
+                'feature-2-desc': 'Book trains, attractions, and experiences instantly with immediate confirmation and mobile tickets.',
+                'feature-3-title': 'Seamless Travel',
+                'feature-3-desc': 'Plan your entire European journey with integrated train bookings, attraction tickets, and local experiences.',
+                'calc-title': 'Price Calculator',
+                'calc-subtitle': 'Calculate your total cost with our transparent pricing - no hidden fees',
+                'calc-adults': 'Adults (18+ years)',
+                'calc-children': 'Children (Under 18)',
+                'calc-date': 'Visit Date',
+                'calc-time': 'Time Slot',
+                'calc-total': 'Total Cost',
+                'calc-adult-tickets': 'Adult tickets:',
+                'calc-child-tickets': 'Child tickets:',
+                'trust-title': 'Trusted by Thousands',
+                'trust-subtitle': 'Join over 20,000+ satisfied customers who chose our platform',
+                'trust-customers': 'Happy Customers',
+                'trust-rating': '5-Star Rating',
+                'trust-secure': 'PCI-DSS Secure',
+                'testimonials-title': 'What Our Customers Say',
+                'testimonials-subtitle': 'Real experiences from travelers who used our app',
+                'testimonial-1': '"The booking process was incredibly simple and we saved so much money on our European trip! The integrated train and attraction bookings made planning effortless."',
+                'testimonial-author-1': '- Sarah Johnson, United States',
+                'testimonial-2': '"User-friendly interface and lightning-fast payment process. Having all our tickets in one app - trains, museums, tours - made our trip so much easier."',
+                'testimonial-author-2': '- Marco Rossi, Italy',
+                'testimonial-3': '"Customer service responded quickly to our questions. The tour packages were amazing and great value. Highly recommend to anyone traveling in Europe!"',
+                'testimonial-author-3': '- Emma Thompson, United Kingdom',
+                'magnet-title': 'Free Travel Guide',
+                'magnet-desc': 'Download our comprehensive "European Train Travel Guide" and discover the best routes, tips, and destinations across Europe.',
+                'magnet-cta': 'Download Free Guide',
+                'download-title': 'Download Our App Today',
+                'download-subtitle': 'Get the latest version directly from our GitHub repository',
+                'download-latest': 'Download Latest Version',
+                'view-source': 'View Source Code',
+                'footer-product': 'Product',
+                'footer-app': 'Mobile App',
+                'footer-web': 'Web Version',
+                'footer-api': 'API Access',
+                'footer-support': 'Support',
+                'footer-faq': 'FAQ',
+                'footer-contact': 'Contact Support',
+                'footer-refund': 'Refund Policy',
+                'footer-company': 'Company',
+                'footer-about': 'About Us',
+                'footer-privacy': 'Privacy Policy',
+                'footer-terms': 'Terms of Service',
+                'footer-contact-title': 'Contact',
+                'footer-chat': 'Live Chat',
+                'footer-rights': 'All rights reserved.',
+                'travel-guide-title': 'European Train Travel Made Easy',
+                'travel-guide-subtitle': 'Discover how easy it is to travel across Europe by train and reach amazing destinations',
+                'route-info-title': 'Popular European Routes',
+                'from-milan-title': 'From Milan',
+                'milan-station': 'Milano Centrale',
+                'intermediate-stations': 'Bologna Centrale (Optional stop)',
+                'florence-station': 'Firenze Santa Maria Novella',
+                'duration': 'Journey Time: ~2 hours',
+                'train-type': 'High-Speed Trains Available',
+                'from-station-title': 'From Train Station to City Center',
+                'step-1': 'Exit the main train station',
+                'step-2': 'Look for city center signs or tourist information',
+                'step-3': 'Take public transport or walk to main attractions',
+                'step-4': 'Use our app to navigate to your booked attractions',
+                'walking-time': 'Average travel time: ~15-30 minutes',
+                'booking-tip-title': 'Pro Tip',
+                'booking-tip': 'Book your European attraction tickets and train journeys in advance! Popular destinations often sell out, especially during peak tourist season (April-October).',
+                'advance-booking': 'Advance booking highly recommended',
+                'nav-travel': 'Travel Guide',
+                'nav-packages': 'Tours',
+                'packages-title': 'Popular Tour Packages',
+                'packages-subtitle': 'Discover amazing travel experiences across Europe',
+                'calc-attraction': 'Attraction'
+            },
+            'zh-tw': {
+                'nav-features': '特色',
+                'nav-pricing': '定價',
+                'nav-reviews': '評價',
+                'nav-download': '下載',
+                'nav-cta': '立即下載',
+                'hero-title': '體驗烏菲齊美術館的文藝之美',
+                'hero-subtitle': '預訂烏菲齊美術館門票最便利的方式。<br>兒童免費入場 - 成人僅需€24！',
+                'hero-calc': '計算價格',
+                'hero-learn': '了解更多',
+                'download-app': '下載應用程式',
+                'view-releases': '查看所有版本',
+                'features-title': '為什麼選擇我們的應用程式？',
+                'features-subtitle': '快速、安全、是參觀烏菲齊美術館最實惠的方式',
+                'feature-1-title': '最便宜的價格',
+                'feature-1-desc': '兒童完全免費入場！成人僅需€24 - 世界級文藝作品的合理價格。',
+                'feature-2-title': '即時確認',
+                'feature-2-desc': '立即獲得預訂確認，門票會即時傳送到您的手機。',
+                'feature-3-title': '安全付款',
+                'feature-3-desc': '您的付款資訊受到銀行級安全保護和PCI-DSS合規性保護。',
+                'calc-title': '價格計算器',
+                'calc-subtitle': '計算您的總費用，透明定價，無隱藏費用',
+                'calc-adults': '成人 (18歲以上)',
+                'calc-children': '兒童 (18歲以下)',
+                'calc-date': '參觀日期',
+                'calc-time': '時段',
+                'calc-total': '總費用',
+                'calc-adult-tickets': '成人票：',
+                'calc-child-tickets': '兒童票：',
+                'trust-title': '數千人的信任',
+                'trust-subtitle': '加入超過20,000名滿意的客戶',
+                'trust-customers': '滿意客戶',
+                'trust-rating': '五星評價',
+                'trust-secure': 'PCI-DSS安全',
+                'testimonials-title': '客戶評價',
+                'testimonials-subtitle': '來自使用我們應用程式的旅客的真實體驗',
+                'testimonial-1': '"預訂過程非常簡單，兒童定價為我們節省了很多錢！即使兒童€1，仍然比其他網站便宜。"',
+                'testimonial-author-1': '- 莎拉·約翰遜，美國',
+                'testimonial-2': '"用戶友好的介面和超快的付款流程。在入口處出示數位門票非常順暢方便。"',
+                'testimonial-author-2': '- 馬可·羅西，義大利',
+                'testimonial-3': '"客服快速回應我們的問題。整個美術館體驗很棒。強烈推薦給任何要去義大利的人！"',
+                'testimonial-author-3': '- 艾瑪·湯普森，英國',
+                'magnet-title': '免費藝術指南',
+                'magnet-desc': '下載我們獨家的"五大必看傑作"指南，充分利用您的烏菲齊美術館之行。',
+                'magnet-cta': '下載免費指南',
+                'download-title': '立即下載我們的應用程式',
+                'download-subtitle': '直接從我們的GitHub儲存庫獲取最新版本',
+                'download-latest': '下載最新版本',
+                'view-source': '查看原始碼',
+                'footer-product': '產品',
+                'footer-app': '手機應用程式',
+                'footer-web': '網頁版',
+                'footer-api': 'API存取',
+                'footer-support': '支援',
+                'footer-faq': '常見問題',
+                'footer-contact': '聯繫支援',
+                'footer-refund': '退款政策',
+                'footer-company': '公司',
+                'footer-about': '關於我們',
+                'footer-privacy': '隱私政策',
+                'footer-terms': '服務條款',
+                'footer-contact-title': '聯繫',
+                'footer-chat': '即時聊天',
+                'footer-rights': '版權所有。',
+                'travel-guide-title': '歐洲火車旅遊攻略',
+                'travel-guide-subtitle': '發現如何輕鬆搭乘火車遊覽歐洲，抵達精彩目的地',
+                'route-info-title': '熱門歐洲路線',
+                'from-milan-title': '從米蘭出發',
+                'milan-station': '米蘭中央車站',
+                'intermediate-stations': '波隆娘中央車站（可選停靠站）',
+                'florence-station': '佛羅倫薩新圣母大殿車站',
+                'duration': '旅程時間：約 2 小時',
+                'train-type': '可搭乘高速火車',
+                'from-station-title': '從火車站到市中心',
+                'step-1': '離開主要火車站',
+                'step-2': '尋找市中心指標或旅遊諮詢處',
+                'step-3': '搭乘大眾運輸或步行至主要景點',
+                'step-4': '使用我們的應用程式導航至您預訂的景點',
+                'walking-time': '平均旅行時間：約15-30分鐘',
+                'booking-tip-title': '專業建議',
+                'booking-tip': '請提前預訂歐洲景點門票和火車行程！熱門目的地經常售罄，尤其在旅遊旺季（4月-10月）期間。',
+                'advance-booking': '強烈建議提前預訂',
+                'nav-travel': '交通指南'
+            },
+            'vi': {
+                'nav-features': 'Tính năng',
+                'nav-pricing': 'Giá cả',
+                'nav-reviews': 'Đánh giá',
+                'nav-download': 'Tải xuống',
+                'nav-cta': 'Tải ngay',
+                'hero-title': 'Trải nghiệm sự kỳ diệu của lâu đài Neuschwanstein',
+                'hero-subtitle': 'Cách thuận tiện nhất để đặt vé lâu đài Neuschwanstein.<br>Trẻ em chỉ trả €1 - rẻ hơn bất kỳ trang web nào!',
+                'hero-calc': 'Tính giá',
+                'hero-learn': 'Tìm hiểu thêm',
+                'download-app': 'Tải ứng dụng',
+                'view-releases': 'Xem tất cả phiên bản',
+                'features-title': 'Tại sao chọn ứng dụng của chúng tôi?',
+                'features-subtitle': 'Nhanh chóng, an toàn và cách tiết kiệm nhất để tham quan lâu đài Neuschwanstein',
+                'feature-1-title': 'Giá rẻ nhất',
+                'feature-1-desc': 'Trẻ em chỉ trả €1 thay vì miễn phí - vẫn rẻ hơn bất kỳ trang web nào khác! Người lớn chỉ €19.',
+                'feature-2-title': 'Xác nhận tức thì',
+                'feature-2-desc': 'Nhận xác nhận đặt chỗ ngay lập tức với vé được gửi ngay đến điện thoại của bạn.',
+                'feature-3-title': 'Thanh toán an toàn',
+                'feature-3-desc': 'Thông tin thanh toán của bạn được bảo vệ với bảo mật cấp ngân hàng và tuân thủ PCI-DSS.',
+                'calc-title': 'Máy tính giá',
+                'calc-subtitle': 'Tính tổng chi phí của bạn với giá cả minh bạch - không có phí ẩn',
+                'calc-adults': 'Người lớn (18+ tuổi)',
+                'calc-children': 'Trẻ em (Dưới 18 tuổi)',
+                'calc-date': 'Ngày tham quan',
+                'calc-time': 'Khung giờ',
+                'calc-total': 'Tổng chi phí',
+                'calc-adult-tickets': 'Vé người lớn:',
+                'calc-child-tickets': 'Vé trẻ em:',
+                'trust-title': 'Được hàng nghìn người tin tưởng',
+                'trust-subtitle': 'Tham gia cùng hơn 20.000 khách hàng hài lòng đã chọn nền tảng của chúng tôi',
+                'trust-customers': 'Khách hàng hài lòng',
+                'trust-rating': 'Đánh giá 5 sao',
+                'trust-secure': 'Bảo mật PCI-DSS',
+                'testimonials-title': 'Khách hàng nói gì',
+                'testimonials-subtitle': 'Trải nghiệm thực tế từ những du khách đã sử dụng ứng dụng của chúng tôi',
+                'testimonial-1': '"Quá trình đặt chỗ cực kỳ đơn giản và giá trẻ em đã tiết kiệm cho chúng tôi rất nhiều tiền! Ngay cả khi €1 mỗi trẻ, vẫn rẻ hơn các trang khác."',
+                'testimonial-author-1': '- Sarah Johnson, Hoa Kỳ',
+                'testimonial-2': '"Giao diện thân thiện với người dùng và quy trình thanh toán siêu nhanh. Xuất trình vé điện tử tại lối vào rất mượt mà và tiện lợi."',
+                'testimonial-author-2': '- Marco Rossi, Ý',
+                'testimonial-3': '"Dịch vụ khách hàng phản hồi nhanh chóng cho các câu hỏi của chúng tôi. Toàn bộ trải nghiệm lâu đài thật tuyệt vời. Rất khuyên bất kỳ ai đến Đức!"',
+                'testimonial-author-3': '- Emma Thompson, Vương quốc Anh',
+                'magnet-title': 'Hướng dẫn lâu đài miễn phí',
+                'magnet-desc': 'Tải xuống hướng dẫn độc quyền "Top 5 điểm ngắm lâu đài" và tận dụng tối đa chuyến thăm lâu đài Neuschwanstein của bạn.',
+                'magnet-cta': 'Tải hướng dẫn miễn phí',
+                'download-title': 'Tải ứng dụng của chúng tôi ngay hôm nay',
+                'download-subtitle': 'Nhận phiên bản mới nhất trực tiếp từ kho GitHub của chúng tôi',
+                'download-latest': 'Tải phiên bản mới nhất',
+                'view-source': 'Xem mã nguồn',
+                'footer-product': 'Sản phẩm',
+                'footer-app': 'Ứng dụng di động',
+                'footer-web': 'Phiên bản web',
+                'footer-api': 'Truy cập API',
+                'footer-support': 'Hỗ trợ',
+                'footer-faq': 'FAQ',
+                'footer-contact': 'Liên hệ hỗ trợ',
+                'footer-refund': 'Chính sách hoàn tiền',
+                'footer-company': 'Công ty',
+                'footer-about': 'Về chúng tôi',
+                'footer-privacy': 'Chính sách quyền riêng tư',
+                'footer-terms': 'Điều khoản dịch vụ',
+                'footer-contact-title': 'Liên hệ',
+                'footer-chat': 'Chat trực tiếp',
+                'footer-rights': 'Bảo lưu mọi quyền.'
+            },
+            'ko': {
+                'nav-features': '특징',
+                'nav-pricing': '가격',
+                'nav-reviews': '리뷰',
+                'nav-download': '다운로드',
+                'nav-cta': '지금 다운로드',
+                'hero-title': '노이슈반슈타인 성의 마법을 경험하세요',
+                'hero-subtitle': '노이슈반슈타인 성 티켓을 예약하는 가장 편리한 방법.<br>어린이는 단 €1 - 어떤 웹사이트보다 저렴!',
+                'hero-calc': '가격 계산',
+                'hero-learn': '자세히 알아보기',
+                'download-app': '앱 다운로드',
+                'view-releases': '모든 릴리스 보기',
+                'features-title': '왜 저희 앱을 선택해야 할까요?',
+                'features-subtitle': '빠르고 안전하며 노이슈반슈타인 성을 방문하는 가장 저렴한 방법',
+                'feature-1-title': '가장 저렴한 가격',
+                'feature-1-desc': '어린이는 무료 대신 €1만 지불 - 여전히 다른 어떤 웹사이트보다 저렴합니다! 성인은 단 €19.',
+                'feature-2-title': '즉시 확인',
+                'feature-2-desc': '예약 확인을 즉시 받고 티켓이 휴대폰으로 즉시 전달됩니다.',
+                'feature-3-title': '안전한 결제',
+                'feature-3-desc': '귀하의 결제 정보는 은행 수준의 보안과 PCI-DSS 준수로 보호됩니다.',
+                'calc-title': '가격 계산기',
+                'calc-subtitle': '투명한 가격으로 총 비용을 계산하세요 - 숨겨진 수수료 없음',
+                'calc-adults': '성인 (18세 이상)',
+                'calc-children': '어린이 (18세 미만)',
+                'calc-date': '방문 날짜',
+                'calc-time': '시간대',
+                'calc-total': '총 비용',
+                'calc-adult-tickets': '성인 티켓:',
+                'calc-child-tickets': '어린이 티켓:',
+                'trust-title': '수천 명의 신뢰',
+                'trust-subtitle': '저희 플랫폼을 선택한 20,000명 이상의 만족한 고객과 함께하세요',
+                'trust-customers': '만족한 고객',
+                'trust-rating': '5성 평점',
+                'trust-secure': 'PCI-DSS 보안',
+                'testimonials-title': '고객이 말하는 것',
+                'testimonials-subtitle': '저희 앱을 사용한 여행자들의 실제 경험',
+                'testimonial-1': '"예약 과정이 믿을 수 없을 정도로 간단했고 어린이 가격으로 많은 돈을 절약했습니다! 어린이당 €1이어도 여전히 다른 사이트보다 저렴합니다."',
+                'testimonial-author-1': '- 사라 존슨, 미국',
+                'testimonial-2': '"사용자 친화적인 인터페이스와 번개같이 빠른 결제 과정. 입구에서 디지털 티켓을 보여주는 것이 매끄럽고 편리했습니다."',
+                'testimonial-author-2': '- 마르코 로시, 이탈리아',
+                'testimonial-3': '"고객 서비스가 우리 질문에 빠르게 응답했습니다. 전체 성 경험이 환상적이었습니다. 독일에 가는 모든 사람에게 강력히 추천합니다!"',
+                'testimonial-author-3': '- 엠마 톰슨, 영국',
+                'magnet-title': '무료 성 가이드',
+                'magnet-desc': '독점적인 "상위 5개 성 전망대" 가이드를 다운로드하고 노이슈반슈타인 성 방문을 최대한 활용하세요.',
+                'magnet-cta': '무료 가이드 다운로드',
+                'download-title': '오늘 저희 앱을 다운로드하세요',
+                'download-subtitle': 'GitHub 저장소에서 직접 최신 버전을 받으세요',
+                'download-latest': '최신 버전 다운로드',
+                'view-source': '소스 코드 보기',
+                'footer-product': '제품',
+                'footer-app': '모바일 앱',
+                'footer-web': '웹 버전',
+                'footer-api': 'API 액세스',
+                'footer-support': '지원',
+                'footer-faq': 'FAQ',
+                'footer-contact': '지원 문의',
+                'footer-refund': '환불 정책',
+                'footer-company': '회사',
+                'footer-about': '회사 소개',
+                'footer-privacy': '개인정보 보호정책',
+                'footer-terms': '서비스 약관',
+                'footer-contact-title': '연락처',
+                'footer-chat': '실시간 채팅',
+                'footer-rights': '모든 권리 보유.'
+            },
+            'tl': {
+                'nav-features': 'Mga Katangian',
+                'nav-pricing': 'Presyo',
+                'nav-reviews': 'Mga Review',
+                'nav-download': 'I-download',
+                'nav-cta': 'I-download Ngayon',
+                'hero-title': 'Maranasan ang Mahika ng Neuschwanstein Castle',
+                'hero-subtitle': 'Ang pinaka-convenient na paraan upang mag-book ng inyong Neuschwanstein Castle tickets.<br>Ang mga bata ay nagbabayad lang ng €1 - mas mura kaysa sa anumang website!',
+                'hero-calc': 'Kalkulahin ang Presyo',
+                'hero-learn': 'Matuto Pa',
+                'download-app': 'I-download ang App',
+                'view-releases': 'Tingnan Lahat ng Releases',
+                'features-title': 'Bakit Piliin ang Aming App?',
+                'features-subtitle': 'Mabilis, secure, at ang pinaka-affordable na paraan upang bisitahin ang Neuschwanstein Castle',
+                'feature-1-title': 'Pinakamababang Presyo',
+                'feature-1-desc': 'Ang mga bata ay nagbabayad lang ng €1 imbes na libre - mas mura pa rin kaysa sa ibang website! Ang mga adulto ay €19 lang.',
+                'feature-2-title': 'Instant na Kumpirmasyon',
+                'feature-2-desc': 'Makakuha ng instant booking confirmation na may tickets na delivered agad sa inyong phone.',
+                'feature-3-title': 'Secure na Bayad',
+                'feature-3-desc': 'Ang inyong payment information ay protected ng bank-level security at PCI-DSS compliance.',
+                'calc-title': 'Price Calculator',
+                'calc-subtitle': 'Kalkulahin ang inyong kabuuang gastos gamit ang aming transparent na pricing - walang nakatagong bayad',
+                'calc-adults': 'Mga Adulto (18+ taon)',
+                'calc-children': 'Mga Bata (Wala pang 18)',
+                'calc-date': 'Petsa ng Pagbisita',
+                'calc-time': 'Time Slot',
+                'calc-total': 'Kabuuang Gastos',
+                'calc-adult-tickets': 'Tickets ng adulto:',
+                'calc-child-tickets': 'Tickets ng bata:',
+                'trust-title': 'Pinagkakatiwalaan ng Libu-libo',
+                'trust-subtitle': 'Sumali sa mahigit 20,000+ satisfied customers na pumili sa aming platform',
+                'trust-customers': 'Masayang Customers',
+                'trust-rating': '5-Star Rating',
+                'trust-secure': 'PCI-DSS Secure',
+                'testimonials-title': 'Ano ang Sinasabi ng Aming Mga Customer',
+                'testimonials-subtitle': 'Tunay na mga karanasan mula sa mga travelers na gumamit ng aming app',
+                'testimonial-1': '"Ang booking process ay hindi makapaniwalang simple at ang child pricing ay nakapag-save sa amin ng maraming pera! Kahit na €1 bawat bata, mas mura pa rin kaysa sa ibang sites."',
+                'testimonial-author-1': '- Sarah Johnson, Estados Unidos',
+                'testimonial-2': '"User-friendly na interface at napakabilis na payment process. Ang pagpapakita ng digital tickets sa entrance ay napakadaling at convenient."',
+                'testimonial-author-2': '- Marco Rossi, Italy',
+                'testimonial-3': '"Ang customer service ay mabilis tumugon sa aming mga tanong. Ang buong castle experience ay napakaganda. Highly recommended sa lahat ng pupunta sa Germany!"',
+                'testimonial-author-3': '- Emma Thompson, United Kingdom',
+                'magnet-title': 'Libreng Castle Guide',
+                'magnet-desc': 'I-download ang aming exclusive na "Top 5 Castle Viewpoints" guide at gawing sulit ang inyong visit sa Neuschwanstein Castle.',
+                'magnet-cta': 'I-download ang Libreng Guide',
+                'download-title': 'I-download ang Aming App Ngayon',
+                'download-subtitle': 'Kunin ang latest version direkta mula sa aming GitHub repository',
+                'download-latest': 'I-download ang Latest Version',
+                'view-source': 'Tingnan ang Source Code',
+                'footer-product': 'Produkto',
+                'footer-app': 'Mobile App',
+                'footer-web': 'Web Version',
+                'footer-api': 'API Access',
+                'footer-support': 'Suporta',
+                'footer-faq': 'FAQ',
+                'footer-contact': 'Contact Support',
+                'footer-refund': 'Refund Policy',
+                'footer-company': 'Kumpanya',
+                'footer-about': 'Tungkol sa Amin',
+                'footer-privacy': 'Privacy Policy',
+                'footer-terms': 'Terms of Service',
+                'footer-contact-title': 'Contact',
+                'footer-chat': 'Live Chat',
+                'footer-rights': 'Lahat ng karapatan ay nakalaan.'
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        // Language switching functionality
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            const langNames = {
+                'en': '🇺🇸 EN',
+                'zh-tw': '🇹🇼 中文',
+                'vi': '🇻🇳 VI',
+                'ko': '🇰🇷 한국어',
+                'tl': '🇵🇭 FIL'
+            };
+
+            document.getElementById('current-lang').textContent = langNames[lang];
+            document.getElementById('language-dropdown').classList.remove('active');
+
+            // Update all text elements
+            const elements = document.querySelectorAll('[data-lang]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const switcher = document.querySelector('.language-switcher');
+            if (!switcher.contains(event.target)) {
+                document.getElementById('language-dropdown').classList.remove('active');
+            }
+        });
+
+        // Price Calculator Functionality
+        function calculatePrice() {
+            const attraction = document.getElementById('attraction').value;
+            const adults = parseInt(document.getElementById('adults').value) || 0;
+            const children = parseInt(document.getElementById('children').value) || 0;
+
+            // Set prices based on attraction
+            let adultPrice = 19; // Default Neuschwanstein
+            if (attraction === 'uffizi') {
+                adultPrice = 21;
+            }
+            const childPrice = 0;  // Free for children at both venues
+
+            const adultTotal = adults * adultPrice;
+            const childTotal = children * childPrice;
+            const total = adultTotal + childTotal;
+
+            document.getElementById('totalPrice').textContent = `€${total}`;
+            document.getElementById('adultTotal').textContent = `€${adultTotal}`;
+            document.getElementById('childTotal').textContent = `€${childTotal}`;
+
+            // Update breakdown text
+            const adultBreakdown = adults > 0 ? `(${adults} × €${adultPrice})` : '';
+            const childBreakdown = children > 0 ? `(Free!)` : '';
+
+            document.querySelector('.price-breakdown div:first-child').innerHTML =
+                `<span data-lang="calc-adult-tickets">${translations[currentLanguage]['calc-adult-tickets']}</span> <span id="adultTotal">€${adultTotal}</span> ${adultBreakdown}`;
+            document.querySelector('.price-breakdown div:last-child').innerHTML =
+                `<span class="cheap-highlight"><span data-lang="calc-child-tickets">${translations[currentLanguage]['calc-child-tickets']}</span> <span id="childTotal">€${childTotal}</span> ${childTotal === 0 && children > 0 ? '(Free!)' : childBreakdown}</span>`;
+        }
+
+        // Add event listeners for calculator inputs
+        document.getElementById('attraction').addEventListener('change', calculatePrice);
+        document.getElementById('adults').addEventListener('input', calculatePrice);
+        document.getElementById('children').addEventListener('input', calculatePrice);
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+        document.getElementById('date').value = today;
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in-up elements
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.23, 1, 0.320, 1), transform 0.8s cubic-bezier(0.23, 1, 0.320, 1)';
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroHeight = hero.offsetHeight;
+
+            if (scrolled < heroHeight) {
+                const parallaxSpeed = scrolled * 0.3;
+                hero.style.transform = `translateY(${parallaxSpeed}px)`;
+            }
+        });
+
+        // Enhanced smooth animations for feature icons
+        document.querySelectorAll('.feature-icon').forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.2}s`;
+            icon.classList.add('float');
+        });
+
+        // Background gradient animation
+        let gradientAngle = 180;
+        setInterval(() => {
+            gradientAngle += 0.1;
+            document.body.style.background = `linear-gradient(${gradientAngle}deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%)`;
+        }, 100);
+
+        // Add cache-busting parameters to download links
+        function addCacheBuster() {
+            const downloadLinks = document.querySelectorAll('a[href*="releases"], a[href*=".apk"], a[href*=".pdf"]');
+            downloadLinks.forEach(link => {
+                const url = new URL(link.href);
+                url.searchParams.set('v', Math.random().toString(36).substring(7));
+                link.href = url.toString();
+            });
+        }
+
+        // Initialize calculator, add cache busters, and set default language
+        calculatePrice();
+        addCacheBuster();
+        changeLanguage('en');
+    </script>
+</body>
+</html>
