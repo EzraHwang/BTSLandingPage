@@ -1,43 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, Globe, Shield, Zap, Users, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ValueProposition = () => {
+  const { t } = useTranslation();
+
   const benefits = [
     {
       icon: Brain,
-      title: "AI-Powered Search",
-      description: "Natural language queries understand your travel intent instantly",
+      titleKey: "features.aiSearch.title",
+      descriptionKey: "features.aiSearch.description",
       color: "text-accent"
     },
     {
       icon: Globe,
-      title: "Multilingual Support",
-      description: "Seamless experience in Chinese & English for Asian travelers",
+      titleKey: "features.multilingual.title",
+      descriptionKey: "features.multilingual.description",
       color: "text-primary"
     },
     {
       icon: Zap,
-      title: "Instant Results",
-      description: "Get comprehensive travel information in seconds, not hours",
+      titleKey: "features.instant.title",
+      descriptionKey: "features.instant.description",
       color: "text-secondary"
     },
     {
       icon: Shield,
-      title: "No Commitment",
-      description: "Explore freely without pressure to book anything",
+      titleKey: "features.noCommitment.title",
+      descriptionKey: "features.noCommitment.description",
       color: "text-success"
     },
     {
       icon: Users,
-      title: "Travel Community",
-      description: "Join 10,000+ Asian travelers exploring Europe",
+      titleKey: "features.community.title",
+      descriptionKey: "features.community.description",
       color: "text-primary"
     },
     {
       icon: Clock,
-      title: "Save Time",
-      description: "Skip endless searching across multiple websites",
+      titleKey: "features.saveTime.title",
+      descriptionKey: "features.saveTime.description",
       color: "text-accent"
     }
   ];
@@ -48,22 +51,17 @@ const ValueProposition = () => {
         <div className="max-w-4xl mx-auto text-center mb-16">
           {/* Problem Statement */}
           <div className="mb-8">
-            <h3 className="text-lg text-muted-foreground mb-4">The Problem</h3>
+            <h3 className="text-lg text-muted-foreground mb-4">{t('problem.title')}</h3>
             <p className="text-2xl md:text-3xl font-semibold text-foreground">
-              Finding Europe travel information is{" "}
-              <span className="text-destructive">scattered, slow, and overwhelming</span>
+              {t('problem.description')}
             </p>
           </div>
 
           {/* Solution */}
           <div className="mb-12">
-            <h3 className="text-lg text-primary mb-4">Our Solution</h3>
+            <h3 className="text-lg text-primary mb-4">{t('solution.title')}</h3>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ticket Trip's AI command box lets Asian travelers{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                instantly explore destinations, trains, and attractions
-              </span>{" "}
-              in Europe
+              {t('solution.description')}
             </h2>
           </div>
         </div>
@@ -75,47 +73,10 @@ const ValueProposition = () => {
               <div className="mb-4">
                 <benefit.icon className={`w-12 h-12 mx-auto ${benefit.color} group-hover:scale-110 transition-transform`} />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+              <h3 className="text-xl font-semibold mb-3">{t(benefit.titleKey)}</h3>
+              <p className="text-muted-foreground leading-relaxed">{t(benefit.descriptionKey)}</p>
             </Card>
           ))}
-        </div>
-
-        {/* Core Differentiators */}
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-8">What Makes Us Different</h3>
-          <div className="space-y-6">
-            <div className="flex items-start gap-4 p-6 bg-background rounded-[var(--radius-lg)] shadow-[var(--shadow-soft)]">
-              <div className="w-2 h-2 rounded-full bg-primary mt-3 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold mb-2">AI understands natural language queries</h4>
-                <p className="text-muted-foreground">Ask questions like you would to a travel expert, not just keywords</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4 p-6 bg-background rounded-[var(--radius-lg)] shadow-[var(--shadow-soft)]">
-              <div className="w-2 h-2 rounded-full bg-secondary mt-3 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold mb-2">Mobile-first, GDPR-compliant design</h4>
-                <p className="text-muted-foreground">Secure, compliant, and optimized for your smartphone</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start gap-4 p-6 bg-background rounded-[var(--radius-lg)] shadow-[var(--shadow-soft)]">
-              <div className="w-2 h-2 rounded-full bg-accent mt-3 flex-shrink-0"></div>
-              <div>
-                <h4 className="font-semibold mb-2">Optimized for Asian travelers exploring Europe</h4>
-                <p className="text-muted-foreground">Cultural context and preferences built into every recommendation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <Button variant="hero" size="lg">
-            Experience the Difference
-          </Button>
         </div>
       </div>
     </section>

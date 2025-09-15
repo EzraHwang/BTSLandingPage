@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__playwright__browser_close",
+      "Bash(npm i)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm run lint)",
+      "Bash(pkill:*)",
+      "mcp__playwright__browser_console_messages",
+      "Bash(ln:*)",
+      "Bash(npm run build:*)",
+      "Bash(docker-compose build:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(npm install:*)",
+      "Bash(docker-compose:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

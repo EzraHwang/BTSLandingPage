@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "trustedBy": "獲得 10,000+ 亞洲旅客信賴",
+    "title": "Ticketrip：歐洲 AI 旅遊搜尋",
+    "subtitle": "即時探索目的地、火車選項和景點 - 無需預訂。",
+    "searchPlaceholder": "問我任何問題：「從巴黎到羅馬適合家庭的最佳火車路線」",
+    "tryLabel": "試試：",
+    "tryOptions": {
+      "passes": "歐洲火車通行證",
+      "budget": "柏林預算行程",
+      "family": "巴黎家庭景點"
+    },
+    "startSearch": "開始 AI 旅遊搜尋",
+    "availableIn": "支援語言：",
+    "languages": {
+      "en": "English",
+      "zh": "中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "fil": "Filipino"
+    }
+  },
+  "problem": {
+    "title": "問題所在",
+    "description": "尋找歐洲旅遊資訊分散、緩慢且令人困惑"
+  },
+  "solution": {
+    "title": "我們的解決方案",
+    "description": "Ticketrip 的 AI 指令框讓亞洲旅客即時探索歐洲目的地、火車和景點"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "AI 搜尋功能",
+      "description": "自然語言查詢即時理解您的旅遊意圖"
+    },
+    "multilingual": {
+      "title": "多語言支援",
+      "description": "為亞洲旅客提供多語言無縫體驗"
+    },
+    "instant": {
+      "title": "即時結果",
+      "description": "在幾秒鐘內獲得全面的旅遊資訊，而非數小時"
+    },
+    "noCommitment": {
+      "title": "無需承諾",
+      "description": "自由探索，無預訂壓力"
+    },
+    "community": {
+      "title": "旅遊社群",
+      "description": "加入 10,000+ 探索歐洲的亞洲旅客"
+    },
+    "saveTime": {
+      "title": "節省時間",
+      "description": "跳過在多個網站上的無盡搜尋"
+    }
+  },
+  "keyFeatures": {
+    "title": "為智慧旅遊規劃打造的核心功能",
+    "subtitle": "每個功能都旨在讓亞洲旅客的歐洲旅遊規劃變得輕鬆",
+    "aiCommand": {
+      "title": "AI 指令框",
+      "description": "自由文字搜尋目的地、交通、時間和預算",
+      "example": "試試：「布拉格浪漫週末，預算 500 歐元以下」"
+    },
+    "leadCapture": {
+      "title": "資訊收集",
+      "description": "可選的電子郵件/電話表單，用於更新和旅行通知",
+      "subtitle": "儲存您的搜尋並獲得個人化更新"
+    },
+    "languageToggle": {
+      "title": "語言切換",
+      "description": "在多種語言間無縫切換",
+      "example": "中文 ⇄ English 一鍵切換"
+    },
+    "perfectFor": "適合每種類型的旅客",
+    "solo": {
+      "title": "獨自旅行者",
+      "description": "非常適合規劃首次歐洲冒險的獨立探索者",
+      "subtitle": "找到安全的社區和適合獨自旅行的景點"
+    },
+    "families": {
+      "title": "家庭旅客",
+      "description": "發現適合家庭的景點和歐洲火車路線",
+      "subtitle": "兒童友善的博物館和便於轉乘的火車路線"
+    },
+    "groups": {
+      "title": "團體旅行",
+      "description": "為朋友團體和情侶協調多城市行程",
+      "subtitle": "適合不同預算的城市跳躍行程"
+    }
+  },
+  "testimonials": {
+    "title": "深受亞洲旅客喜愛",
+    "rating": "4.9/5",
+    "reviews": "來自 2,847 則評論",
+    "users": [
+      {
+        "name": "李偉",
+        "location": "中國上海",
+        "initials": "LW",
+        "review": "Ticketrip 的 AI 搜尋讓我的歐洲旅行規劃變得簡單快速！發現了我從未知道的火車路線。"
+      },
+      {
+        "name": "金民俊",
+        "location": "韓國首爾",
+        "initials": "KM",
+        "review": "終於有一個了解亞洲旅客需求的旅遊工具。語言支援非常完美。"
+      },
+      {
+        "name": "田中雪",
+        "location": "日本東京",
+        "initials": "TY",
+        "review": "用它規劃了一個五城市的歐洲旅行。AI 建議非常準確，為我節省了數小時的研究時間。"
+      }
+    ]
+  },
+  "trust": {
+    "title": "獲得亞洲旅客信賴",
+    "subtitle": "加入數千名滿意旅客，充滿信心地發現歐洲",
+    "stats": {
+      "travelers": "10,000+",
+      "travelersDesc": "亞洲旅客信賴我們",
+      "useful": "99%",
+      "usefulDesc": "用戶認為搜尋有用",
+      "countries": "27",
+      "countriesDesc": "涵蓋的歐洲國家",
+      "rating": "4.9/5",
+      "ratingDesc": "平均用戶評分"
+    },
+    "partnerships": "產業合作夥伴與認可",
+    "partners": {
+      "eurail": {
+        "name": "Eurail",
+        "status": "官方合作夥伴",
+        "description": "授權的歐洲火車通行證經銷商"
+      },
+      "etc": {
+        "name": "歐洲旅遊委員會",
+        "status": "會員",
+        "description": "促進歐洲永續旅遊"
+      },
+      "traveltech": {
+        "name": "TravelTech Asia",
+        "status": "精選",
+        "description": "旅遊科技創新認可"
+      },
+      "gdpr": {
+        "name": "GDPR 認證",
+        "status": "合規",
+        "description": "完整的歐洲資料保護合規"
+      }
+    },
+    "security": "安全性與合規性",
+    "securityFeatures": {
+      "gdpr": {
+        "title": "GDPR 合規",
+        "description": "歐洲資料保護標準"
+      },
+      "secure": {
+        "title": "安全資料",
+        "description": "所有用戶資料端到端加密"
+      },
+      "certified": {
+        "title": "產業認證",
+        "description": "旅遊產業安全認證"
+      }
+    }
+  },
+  "footer": {
+    "description": "為亞洲旅客設計的 AI 歐洲旅遊搜尋。即時探索目的地、火車選項和景點 - 無預訂壓力。",
+    "stayUpdated": "保持更新",
+    "emailPlaceholder": "您的電子郵件地址",
+    "subscribe": "訂閱",
+    "subscribeNote": "獲得旅遊提示和目的地更新。隨時取消訂閱。",
+    "quickLinks": "快速連結",
+    "support": "支援",
+    "language": "語言：",
+    "copyright": "© 2025 Ticketrip. 版權所有。為探索歐洲的亞洲旅客而建。"
+  },
+  "navigation": {
+    "aiSearch": "AI 旅遊搜尋",
+    "howItWorks": "運作方式",
+    "blog": "旅遊部落格",
+    "successStories": "成功故事",
+    "faq": "常見問題",
+    "helpCenter": "幫助中心",
+    "contact": "聯絡我們",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "gdprCompliance": "GDPR 合規"
+  }
+}

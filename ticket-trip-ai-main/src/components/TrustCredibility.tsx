@@ -1,73 +1,76 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Award, Users, TrendingUp, Globe, CheckCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const TrustCredibility = () => {
+  const { t } = useTranslation();
+
   const stats = [
     {
       icon: Users,
-      number: "10,000+",
-      label: "Asian travelers trust us",
+      numberKey: "trust.stats.travelers",
+      labelKey: "trust.stats.travelersDesc",
       color: "text-primary"
     },
     {
       icon: TrendingUp,
-      number: "99%",
-      label: "Users found searches useful",
+      numberKey: "trust.stats.useful",
+      labelKey: "trust.stats.usefulDesc",
       color: "text-success"
     },
     {
       icon: Globe,
-      number: "27",
-      label: "European countries covered",
+      numberKey: "trust.stats.countries",
+      labelKey: "trust.stats.countriesDesc",
       color: "text-secondary"
     },
     {
       icon: Award,
-      number: "4.9/5",
-      label: "Average user rating",
+      numberKey: "trust.stats.rating",
+      labelKey: "trust.stats.ratingDesc",
       color: "text-accent"
     }
   ];
 
   const partnerships = [
     {
-      name: "Eurail",
-      type: "Official Partner",
-      description: "Authorized European train pass distributor"
+      nameKey: "trust.partners.eurail.name",
+      typeKey: "trust.partners.eurail.status",
+      descriptionKey: "trust.partners.eurail.description"
     },
     {
-      name: "European Tourism Commission",
-      type: "Member",
-      description: "Promoting sustainable travel across Europe"
+      nameKey: "trust.partners.etc.name",
+      typeKey: "trust.partners.etc.status",
+      descriptionKey: "trust.partners.etc.description"
     },
     {
-      name: "TravelTech Asia",
-      type: "Featured",
-      description: "Recognized innovation in travel technology"
+      nameKey: "trust.partners.traveltech.name",
+      typeKey: "trust.partners.traveltech.status",
+      descriptionKey: "trust.partners.traveltech.description"
     },
     {
-      name: "GDPR Certified",
-      type: "Compliance",
-      description: "Full European data protection compliance"
+      nameKey: "trust.partners.gdpr.name",
+      typeKey: "trust.partners.gdpr.status",
+      descriptionKey: "trust.partners.gdpr.description"
     }
   ];
 
   const compliance = [
     {
       icon: Shield,
-      title: "GDPR Compliant",
-      description: "European data protection standards"
+      titleKey: "trust.securityFeatures.gdpr.title",
+      descriptionKey: "trust.securityFeatures.gdpr.description"
     },
     {
       icon: CheckCircle,
-      title: "Secure Data",
-      description: "End-to-end encryption for all user data"
+      titleKey: "trust.securityFeatures.secure.title",
+      descriptionKey: "trust.securityFeatures.secure.description"
     },
     {
       icon: Award,
-      title: "Industry Certified",
-      description: "Travel industry safety certifications"
+      titleKey: "trust.securityFeatures.certified.title",
+      descriptionKey: "trust.securityFeatures.certified.description"
     }
   ];
 
@@ -78,13 +81,10 @@ const TrustCredibility = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Trusted by Travelers{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Across Asia
-              </span>
+              {t('trust.title')}
             </h2>
             <p className="text-lg text-muted-foreground">
-              Join thousands of satisfied travelers who've discovered Europe with confidence
+              {t('trust.subtitle')}
             </p>
           </div>
 
@@ -92,8 +92,8 @@ const TrustCredibility = () => {
             {stats.map((stat, index) => (
               <Card key={index} className="travel-card p-6 text-center">
                 <stat.icon className={`w-10 h-10 mx-auto ${stat.color} mb-4`} />
-                <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                <div className="text-3xl font-bold mb-2">{t(stat.numberKey)}</div>
+                <p className="text-sm text-muted-foreground">{t(stat.labelKey)}</p>
               </Card>
             ))}
           </div>
@@ -101,7 +101,7 @@ const TrustCredibility = () => {
 
         {/* Partnerships & Recognition */}
         <div className="max-w-4xl mx-auto mb-20">
-          <h3 className="text-2xl font-bold text-center mb-12">Industry Partnerships & Recognition</h3>
+          <h3 className="text-2xl font-bold text-center mb-12">{t('trust.partnerships')}</h3>
           
           <div className="grid md:grid-cols-2 gap-6">
             {partnerships.map((partner, index) => (
@@ -111,10 +111,10 @@ const TrustCredibility = () => {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-semibold">{partner.name}</h4>
-                    <Badge variant="outline" className="text-xs">{partner.type}</Badge>
+                    <h4 className="font-semibold">{t(partner.nameKey)}</h4>
+                    <Badge variant="outline" className="text-xs">{t(partner.typeKey)}</Badge>
                   </div>
-                  <p className="text-sm text-muted-foreground">{partner.description}</p>
+                  <p className="text-sm text-muted-foreground">{t(partner.descriptionKey)}</p>
                 </div>
               </div>
             ))}
@@ -123,7 +123,7 @@ const TrustCredibility = () => {
 
         {/* Security & Compliance */}
         <div className="max-w-4xl mx-auto mb-16">
-          <h3 className="text-2xl font-bold text-center mb-12">Security & Compliance</h3>
+          <h3 className="text-2xl font-bold text-center mb-12">{t('trust.security')}</h3>
           
           <div className="grid md:grid-cols-3 gap-8">
             {compliance.map((item, index) => (
@@ -131,32 +131,13 @@ const TrustCredibility = () => {
                 <div className="w-16 h-16 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-8 h-8 text-success" />
                 </div>
-                <h4 className="font-semibold mb-2">{item.title}</h4>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h4 className="font-semibold mb-2">{t(item.titleKey)}</h4>
+                <p className="text-sm text-muted-foreground">{t(item.descriptionKey)}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-6">Meet the Team</h3>
-          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-[var(--radius-lg)] p-8">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-xl font-bold text-primary-foreground">TT</span>
-              </div>
-              <div className="text-left">
-                <h4 className="text-xl font-semibold">Ticket Trip Team</h4>
-                <p className="text-muted-foreground">Travel experts bridging Asia and Europe</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed">
-              Our team combines deep expertise in Asian travel preferences with extensive knowledge of European destinations. 
-              We've personally traveled these routes and understand the unique needs of Asian travelers exploring Europe.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

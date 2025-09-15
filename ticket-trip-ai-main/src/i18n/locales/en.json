@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "trustedBy": "Trusted by 10,000+ Asian travelers",
+    "title": "Ticketrip: AI Travel Search for Europe",
+    "subtitle": "Explore destinations, train options, and attractions instantly – no booking needed.",
+    "searchPlaceholder": "Ask me anything: 'Best train route from Paris to Rome for families'",
+    "tryLabel": "Try:",
+    "tryOptions": {
+      "passes": "Europe train passes",
+      "budget": "Budget itinerary Berlin",
+      "family": "Family attractions Paris"
+    },
+    "startSearch": "Start AI Travel Search",
+    "availableIn": "Available in:",
+    "languages": {
+      "en": "English",
+      "zh": "中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "fil": "Filipino"
+    }
+  },
+  "problem": {
+    "title": "The Problem",
+    "description": "Finding Europe travel information is scattered, slow, and overwhelming"
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "Ticketrip's AI command box lets Asian travelers instantly explore destinations, trains, and attractions in Europe"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "AI-Powered Search",
+      "description": "Natural language queries understand your travel intent instantly"
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Seamless experience in multiple languages for Asian travelers"
+    },
+    "instant": {
+      "title": "Instant Results",
+      "description": "Get comprehensive travel information in seconds, not hours"
+    },
+    "noCommitment": {
+      "title": "No Commitment",
+      "description": "Explore freely without pressure to book anything"
+    },
+    "community": {
+      "title": "Travel Community",
+      "description": "Join 10,000+ Asian travelers exploring Europe"
+    },
+    "saveTime": {
+      "title": "Save Time",
+      "description": "Skip endless searching across multiple websites"
+    }
+  },
+  "keyFeatures": {
+    "title": "Key Features Built for Smart Travel Planning",
+    "subtitle": "Every feature designed to make Europe travel planning effortless for Asian travelers",
+    "aiCommand": {
+      "title": "AI Command Box",
+      "description": "Free-text search for destinations, transport, duration, and budget",
+      "example": "Try: 'Romantic weekend in Prague under €500'"
+    },
+    "leadCapture": {
+      "title": "Lead Capture",
+      "description": "Optional email/phone form for updates and trip notifications",
+      "subtitle": "Save your searches and get personalized updates"
+    },
+    "languageToggle": {
+      "title": "Language Toggle",
+      "description": "Switch seamlessly between multiple languages",
+      "example": "中文 ⇄ English in one click"
+    },
+    "perfectFor": "Perfect For Every Type of Traveler",
+    "solo": {
+      "title": "Solo Travelers",
+      "description": "Perfect for independent explorers planning their first Europe adventure",
+      "subtitle": "Find safe neighborhoods and solo-friendly attractions"
+    },
+    "families": {
+      "title": "Families",
+      "description": "Discover family-friendly attractions and train routes across Europe",
+      "subtitle": "Kid-friendly museums and train routes with easy connections"
+    },
+    "groups": {
+      "title": "Group Trips",
+      "description": "Coordinate multi-city itineraries for friend groups and couples",
+      "subtitle": "City-hopping itineraries that work for different budgets"
+    }
+  },
+  "testimonials": {
+    "title": "Loved by Travelers Across Asia",
+    "rating": "4.9/5",
+    "reviews": "from 2,847 reviews",
+    "users": [
+      {
+        "name": "Li Wei",
+        "location": "Shanghai, China",
+        "initials": "LW",
+        "review": "Ticketrip's AI search made planning my Europe trip easy and fast! Found train routes I never knew existed."
+      },
+      {
+        "name": "Kim Min-jun",
+        "location": "Seoul, Korea",
+        "initials": "KM",
+        "review": "Finally, a travel tool that understands what Asian travelers need. The language support is perfect."
+      },
+      {
+        "name": "Tanaka Yuki",
+        "location": "Tokyo, Japan",
+        "initials": "TY",
+        "review": "Used Ticketrip to plan a 5-city Europe trip. The AI suggestions were spot-on and saved me hours of research."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Trusted by Travelers Across Asia",
+    "subtitle": "Join thousands of satisfied travelers who've discovered Europe with confidence",
+    "stats": {
+      "travelers": "10,000+",
+      "travelersDesc": "Asian travelers trust us",
+      "useful": "99%",
+      "usefulDesc": "Users found searches useful",
+      "countries": "27",
+      "countriesDesc": "European countries covered",
+      "rating": "4.9/5",
+      "ratingDesc": "Average user rating"
+    },
+    "partnerships": "Industry Partnerships & Recognition",
+    "partners": {
+      "eurail": {
+        "name": "Eurail",
+        "status": "Official Partner",
+        "description": "Authorized European train pass distributor"
+      },
+      "etc": {
+        "name": "European Tourism Commission",
+        "status": "Member",
+        "description": "Promoting sustainable travel across Europe"
+      },
+      "traveltech": {
+        "name": "TravelTech Asia",
+        "status": "Featured",
+        "description": "Recognized innovation in travel technology"
+      },
+      "gdpr": {
+        "name": "GDPR Certified",
+        "status": "Compliance",
+        "description": "Full European data protection compliance"
+      }
+    },
+    "security": "Security & Compliance",
+    "securityFeatures": {
+      "gdpr": {
+        "title": "GDPR Compliant",
+        "description": "European data protection standards"
+      },
+      "secure": {
+        "title": "Secure Data",
+        "description": "End-to-end encryption for all user data"
+      },
+      "certified": {
+        "title": "Industry Certified",
+        "description": "Travel industry safety certifications"
+      }
+    }
+  },
+  "footer": {
+    "description": "AI-powered Europe travel search designed for Asian travelers. Explore destinations, train options, and attractions instantly – no booking pressure.",
+    "stayUpdated": "Stay Updated",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribeNote": "Get travel tips and destination updates. Unsubscribe anytime.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "language": "Language:",
+    "copyright": "© 2025 Ticketrip. All rights reserved. Built for Asian travelers exploring Europe."
+  },
+  "navigation": {
+    "aiSearch": "AI Travel Search",
+    "howItWorks": "How It Works",
+    "blog": "Travel Blog",
+    "successStories": "Success Stories",
+    "faq": "FAQ",
+    "helpCenter": "Help Center",
+    "contact": "Contact Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "gdprCompliance": "GDPR Compliance"
+  }
+}

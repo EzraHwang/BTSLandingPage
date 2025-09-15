@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "trustedBy": "Pinagkakatiwalaan ng mahigit 10,000 Asian travelers",
+    "title": "Ticketrip: AI Travel Search para sa Europe",
+    "subtitle": "Galugarin ang mga destinasyon, train options, at attractions nang instant - walang booking na kailangan.",
+    "searchPlaceholder": "Tanungin mo ako ng kahit ano: 'Pinakamahusay na train route mula Paris hanggang Rome para sa mga pamilya'",
+    "tryLabel": "Subukan:",
+    "tryOptions": {
+      "passes": "Europe train passes",
+      "budget": "Budget itinerary Berlin",
+      "family": "Family attractions Paris"
+    },
+    "startSearch": "Simulan ang AI Travel Search",
+    "availableIn": "Available sa:",
+    "languages": {
+      "en": "English",
+      "zh": "中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "fil": "Filipino"
+    }
+  },
+  "problem": {
+    "title": "Ang Problema",
+    "description": "Ang paghahanap ng Europe travel information ay nakakalat, mabagal, at nakakalito"
+  },
+  "solution": {
+    "title": "Ang Aming Solusyon",
+    "description": "Ang AI command box ng Ticketrip ay nagbibigay-daan sa mga Asian travelers na agad na mag-explore ng mga destinasyon, trains, at attractions sa Europe"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "AI-Powered Search",
+      "description": "Ang natural language queries ay agad na nauunawaan ang inyong travel intent"
+    },
+    "multilingual": {
+      "title": "Multilingual Support",
+      "description": "Seamless na experience sa maraming wika para sa mga Asian travelers"
+    },
+    "instant": {
+      "title": "Instant Results",
+      "description": "Makakuha ng comprehensive travel information sa loob ng ilang segundo, hindi oras"
+    },
+    "noCommitment": {
+      "title": "Walang Commitment",
+      "description": "Mag-explore nang libre nang walang pressure na mag-book ng kahit ano"
+    },
+    "community": {
+      "title": "Travel Community",
+      "description": "Sumama sa mahigit 10,000 Asian travelers na nag-e-explore ng Europe"
+    },
+    "saveTime": {
+      "title": "Makatipid ng Oras",
+      "description": "Laktawan ang walang-hanggang paghahanap sa maraming websites"
+    }
+  },
+  "keyFeatures": {
+    "title": "Mga Pangunahing Feature na Ginawa para sa Matalinong Travel Planning",
+    "subtitle": "Bawat feature ay dinisenyo para gawing madali ang Europe travel planning para sa mga Asian travelers",
+    "aiCommand": {
+      "title": "AI Command Box",
+      "description": "Free-text search para sa mga destinasyon, transportation, duration, at budget",
+      "example": "Subukan: 'Romantic weekend sa Prague na nasa ilalim ng €500'"
+    },
+    "leadCapture": {
+      "title": "Lead Capture",
+      "description": "Optional na email/phone form para sa mga updates at trip notifications",
+      "subtitle": "I-save ang inyong mga searches at makakuha ng personalized updates"
+    },
+    "languageToggle": {
+      "title": "Language Toggle",
+      "description": "Mag-switch nang seamless sa pagitan ng maraming wika",
+      "example": "中文 ⇄ English sa isang click"
+    },
+    "perfectFor": "Perfect Para sa Bawat Uri ng Traveler",
+    "solo": {
+      "title": "Solo Travelers",
+      "description": "Perfect para sa mga independent explorers na nag-paplano ng kanilang unang Europe adventure",
+      "subtitle": "Hanapin ang mga safe neighborhoods at solo-friendly attractions"
+    },
+    "families": {
+      "title": "Mga Pamilya",
+      "description": "Tuklasin ang mga family-friendly attractions at train routes sa buong Europe",
+      "subtitle": "Kid-friendly museums at train routes na may madaling connections"
+    },
+    "groups": {
+      "title": "Group Trips",
+      "description": "I-coordinate ang multi-city itineraries para sa mga friend groups at couples",
+      "subtitle": "City-hopping itineraries na swak sa iba't ibang budget"
+    }
+  },
+  "testimonials": {
+    "title": "Minamahal ng mga Travelers sa Buong Asia",
+    "rating": "4.9/5",
+    "reviews": "mula sa 2,847 reviews",
+    "users": [
+      {
+        "name": "Li Wei",
+        "location": "Shanghai, China",
+        "initials": "LW",
+        "review": "Ang AI search ng Ticketrip ay ginawang madali at mabilis ang pag-plano ng aking Europe trip! Nahanap ko ang mga train routes na hindi ko alam na umiiral."
+      },
+      {
+        "name": "Kim Min-jun",
+        "location": "Seoul, Korea",
+        "initials": "KM",
+        "review": "Sa wakas, may travel tool na nauunawaan kung ano ang kailangan ng mga Asian travelers. Perfect ang language support."
+      },
+      {
+        "name": "Tanaka Yuki",
+        "location": "Tokyo, Japan",
+        "initials": "TY",
+        "review": "Ginamit ko ito para mag-plano ng 5-city Europe trip. Ang AI suggestions ay tumpak at nakatipid ako ng ilang oras sa research."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Pinagkakatiwalaan ng mga Travelers sa Buong Asia",
+    "subtitle": "Sumama sa libu-libong satisfied travelers na nakatuklas ng Europe nang may confidence",
+    "stats": {
+      "travelers": "10,000+",
+      "travelersDesc": "Asian travelers ang nagtitiwala sa amin",
+      "useful": "99%",
+      "usefulDesc": "Users na nakahanap ng kapaki-pakinabang na searches",
+      "countries": "27",
+      "countriesDesc": "European countries na saklaw",
+      "rating": "4.9/5",
+      "ratingDesc": "Average user rating"
+    },
+    "partnerships": "Industry Partnerships & Recognition",
+    "partners": {
+      "eurail": {
+        "name": "Eurail",
+        "status": "Official Partner",
+        "description": "Authorized European train pass distributor"
+      },
+      "etc": {
+        "name": "European Tourism Commission",
+        "status": "Member",
+        "description": "Nag-promote ng sustainable travel sa buong Europe"
+      },
+      "traveltech": {
+        "name": "TravelTech Asia",
+        "status": "Featured",
+        "description": "Kinilala ang innovation sa travel technology"
+      },
+      "gdpr": {
+        "name": "GDPR Certified",
+        "status": "Compliance",
+        "description": "Kumpletong European data protection compliance"
+      }
+    },
+    "security": "Security & Compliance",
+    "securityFeatures": {
+      "gdpr": {
+        "title": "GDPR Compliant",
+        "description": "European data protection standards"
+      },
+      "secure": {
+        "title": "Secure Data",
+        "description": "End-to-end encryption para sa lahat ng user data"
+      },
+      "certified": {
+        "title": "Industry Certified",
+        "description": "Travel industry safety certifications"
+      }
+    }
+  },
+  "footer": {
+    "description": "AI-powered Europe travel search na dinisenyo para sa mga Asian travelers. Galugarin ang mga destinasyon, train options, at attractions nang instant - walang booking pressure.",
+    "stayUpdated": "Manatiling Updated",
+    "emailPlaceholder": "Ang inyong email address",
+    "subscribe": "Mag-subscribe",
+    "subscribeNote": "Makakuha ng travel tips at destination updates. Unsubscribe anytime.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "language": "Wika:",
+    "copyright": "© 2025 Ticketrip. Lahat ng karapatan ay nakalaan. Ginawa para sa mga Asian travelers na nag-e-explore ng Europe."
+  },
+  "navigation": {
+    "aiSearch": "AI Travel Search",
+    "howItWorks": "Paano Gumagana",
+    "blog": "Travel Blog",
+    "successStories": "Success Stories",
+    "faq": "FAQ",
+    "helpCenter": "Help Center",
+    "contact": "Makipag-ugnayan",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "gdprCompliance": "GDPR Compliance"
+  }
+}

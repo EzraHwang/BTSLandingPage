@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "trustedBy": "Được tin tưởng bởi hơn 10,000 du khách châu Á",
+    "title": "Ticketrip: Tìm kiếm Du lịch Châu Âu bằng AI",
+    "subtitle": "Khám phá điểm đến, tùy chọn tàu hỏa và các điểm tham quan ngay lập tức - không cần đặt trước.",
+    "searchPlaceholder": "Hỏi tôi bất cứ điều gì: 'Tuyến tàu tốt nhất từ Paris đến Rome cho gia đình'",
+    "tryLabel": "Thử:",
+    "tryOptions": {
+      "passes": "Vé tàu châu Âu",
+      "budget": "Hành trình tiết kiệm Berlin",
+      "family": "Điểm tham quan gia đình Paris"
+    },
+    "startSearch": "Bắt đầu Tìm kiếm Du lịch AI",
+    "availableIn": "Có sẵn bằng:",
+    "languages": {
+      "en": "English",
+      "zh": "中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "fil": "Filipino"
+    }
+  },
+  "problem": {
+    "title": "Vấn đề",
+    "description": "Tìm thông tin du lịch châu Âu rải rác, chậm và phức tạp"
+  },
+  "solution": {
+    "title": "Giải pháp của chúng tôi",
+    "description": "Hộp lệnh AI của Ticketrip giúp du khách châu Á khám phá ngay lập tức các điểm đến, tàu hỏa và điểm tham quan ở châu Âu"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "Tìm kiếm bằng AI",
+      "description": "Truy vấn ngôn ngữ tự nhiên hiểu ý định du lịch của bạn ngay lập tức"
+    },
+    "multilingual": {
+      "title": "Hỗ trợ Đa ngôn ngữ",
+      "description": "Trải nghiệm liền mạch bằng nhiều ngôn ngữ cho du khách châu Á"
+    },
+    "instant": {
+      "title": "Kết quả Tức thì",
+      "description": "Nhận thông tin du lịch toàn diện trong vài giây, không phải hàng giờ"
+    },
+    "noCommitment": {
+      "title": "Không Cam kết",
+      "description": "Khám phá tự do mà không có áp lực đặt chỗ"
+    },
+    "community": {
+      "title": "Cộng đồng Du lịch",
+      "description": "Tham gia cùng hơn 10,000 du khách châu Á khám phá châu Âu"
+    },
+    "saveTime": {
+      "title": "Tiết kiệm Thời gian",
+      "description": "Bỏ qua việc tìm kiếm vô tận trên nhiều trang web"
+    }
+  },
+  "keyFeatures": {
+    "title": "Tính năng Chính được Xây dựng cho Lập kế hoạch Du lịch Thông minh",
+    "subtitle": "Mọi tính năng được thiết kế để làm cho việc lập kế hoạch du lịch châu Âu trở nên dễ dàng cho du khách châu Á",
+    "aiCommand": {
+      "title": "Hộp Lệnh AI",
+      "description": "Tìm kiếm văn bản tự do cho điểm đến, phương tiện, thời gian và ngân sách",
+      "example": "Thử: 'Cuối tuần lãng mạn ở Prague dưới 500€'"
+    },
+    "leadCapture": {
+      "title": "Thu thập Thông tin",
+      "description": "Biểu mẫu email/điện thoại tùy chọn cho cập nhật và thông báo chuyến đi",
+      "subtitle": "Lưu tìm kiếm của bạn và nhận cập nhật cá nhân hóa"
+    },
+    "languageToggle": {
+      "title": "Chuyển đổi Ngôn ngữ",
+      "description": "Chuyển đổi liền mạch giữa nhiều ngôn ngữ",
+      "example": "中文 ⇄ English chỉ với một cú nhấp"
+    },
+    "perfectFor": "Hoàn hảo Cho Mọi Loại Du khách",
+    "solo": {
+      "title": "Du khách Đơn độc",
+      "description": "Hoàn hảo cho những người khám phá độc lập lập kế hoạch cho cuộc phiêu lưu châu Âu đầu tiên",
+      "subtitle": "Tìm khu vực an toàn và điểm tham quan thân thiện với du khách đơn độc"
+    },
+    "families": {
+      "title": "Gia đình",
+      "description": "Khám phá các điểm tham quan thân thiện với gia đình và tuyến tàu hỏa khắp châu Âu",
+      "subtitle": "Bảo tàng thân thiện với trẻ em và tuyến tàu với kết nối dễ dàng"
+    },
+    "groups": {
+      "title": "Chuyến đi Nhóm",
+      "description": "Phối hợp hành trình nhiều thành phố cho nhóm bạn và cặp đôi",
+      "subtitle": "Hành trình nhảy thành phố phù hợp với các ngân sách khác nhau"
+    }
+  },
+  "testimonials": {
+    "title": "Được Yêu thích bởi Du khách Khắp Châu Á",
+    "rating": "4.9/5",
+    "reviews": "từ 2,847 đánh giá",
+    "users": [
+      {
+        "name": "Li Wei",
+        "location": "Thượng Hải, Trung Quốc",
+        "initials": "LW",
+        "review": "Tìm kiếm AI của Ticketrip làm cho việc lập kế hoạch chuyến đi châu Âu của tôi trở nên dễ dàng và nhanh chóng! Tìm thấy những tuyến tàu mà tôi chưa bao giờ biết tồn tại."
+      },
+      {
+        "name": "Kim Min-jun",
+        "location": "Seoul, Hàn Quốc",
+        "initials": "KM",
+        "review": "Cuối cùng, một công cụ du lịch hiểu những gì du khách châu Á cần. Hỗ trợ ngôn ngữ hoàn hảo."
+      },
+      {
+        "name": "Tanaka Yuki",
+        "location": "Tokyo, Nhật Bản",
+        "initials": "TY",
+        "review": "Đã sử dụng nó để lập kế hoạch chuyến đi châu Âu 5 thành phố. Các gợi ý AI rất chính xác và tiết kiệm cho tôi hàng giờ nghiên cứu."
+      }
+    ]
+  },
+  "trust": {
+    "title": "Được Tin tưởng bởi Du khách Khắp Châu Á",
+    "subtitle": "Tham gia cùng hàng ngàn du khách hài lòng đã khám phá châu Âu với sự tự tin",
+    "stats": {
+      "travelers": "10,000+",
+      "travelersDesc": "Du khách châu Á tin tưởng chúng tôi",
+      "useful": "99%",
+      "usefulDesc": "Người dùng thấy tìm kiếm hữu ích",
+      "countries": "27",
+      "countriesDesc": "Quốc gia châu Âu được bao phủ",
+      "rating": "4.9/5",
+      "ratingDesc": "Đánh giá trung bình của người dùng"
+    },
+    "partnerships": "Đối tác Ngành và Công nhận",
+    "partners": {
+      "eurail": {
+        "name": "Eurail",
+        "status": "Đối tác Chính thức",
+        "description": "Nhà phân phối vé tàu châu Âu được ủy quyền"
+      },
+      "etc": {
+        "name": "Ủy ban Du lịch Châu Âu",
+        "status": "Thành viên",
+        "description": "Thúc đẩy du lịch bền vững khắp châu Âu"
+      },
+      "traveltech": {
+        "name": "TravelTech Asia",
+        "status": "Nổi bật",
+        "description": "Công nhận sự đổi mới trong công nghệ du lịch"
+      },
+      "gdpr": {
+        "name": "Chứng nhận GDPR",
+        "status": "Tuân thủ",
+        "description": "Tuân thủ đầy đủ bảo vệ dữ liệu châu Âu"
+      }
+    },
+    "security": "Bảo mật & Tuân thủ",
+    "securityFeatures": {
+      "gdpr": {
+        "title": "Tuân thủ GDPR",
+        "description": "Tiêu chuẩn bảo vệ dữ liệu châu Âu"
+      },
+      "secure": {
+        "title": "Dữ liệu An toàn",
+        "description": "Mã hóa đầu cuối cho tất cả dữ liệu người dùng"
+      },
+      "certified": {
+        "title": "Chứng nhận Ngành",
+        "description": "Chứng nhận an toàn ngành du lịch"
+      }
+    }
+  },
+  "footer": {
+    "description": "Tìm kiếm du lịch châu Âu bằng AI được thiết kế cho du khách châu Á. Khám phá điểm đến, tùy chọn tàu hỏa và điểm tham quan ngay lập tức - không có áp lực đặt chỗ.",
+    "stayUpdated": "Cập nhật Thường xuyên",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "subscribe": "Đăng ký",
+    "subscribeNote": "Nhận mẹo du lịch và cập nhật điểm đến. Hủy đăng ký bất cứ lúc nào.",
+    "quickLinks": "Liên kết Nhanh",
+    "support": "Hỗ trợ",
+    "language": "Ngôn ngữ:",
+    "copyright": "© 2025 Ticketrip. Tất cả quyền được bảo lưu. Được xây dựng cho du khách châu Á khám phá châu Âu."
+  },
+  "navigation": {
+    "aiSearch": "Tìm kiếm Du lịch AI",
+    "howItWorks": "Cách Hoạt động",
+    "blog": "Blog Du lịch",
+    "successStories": "Câu chuyện Thành công",
+    "faq": "Câu hỏi Thường gặp",
+    "helpCenter": "Trung tâm Trợ giúp",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách Bảo mật",
+    "terms": "Điều khoản Dịch vụ",
+    "gdprCompliance": "Tuân thủ GDPR"
+  }
+}

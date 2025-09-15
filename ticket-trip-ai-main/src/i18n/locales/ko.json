@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "trustedBy": "10,000명 이상의 아시아 여행자들이 신뢰",
+    "title": "Ticketrip: 유럽 AI 여행 검색",
+    "subtitle": "목적지, 기차 옵션, 명소를 즉시 탐색하세요 - 예약 불필요.",
+    "searchPlaceholder": "무엇이든 물어보세요: '가족을 위한 파리에서 로마까지 최고의 기차 노선'",
+    "tryLabel": "시도해보세요:",
+    "tryOptions": {
+      "passes": "유럽 기차 패스",
+      "budget": "베를린 예산 여행",
+      "family": "파리 가족 명소"
+    },
+    "startSearch": "AI 여행 검색 시작",
+    "availableIn": "지원 언어:",
+    "languages": {
+      "en": "English",
+      "zh": "中文",
+      "vi": "Tiếng Việt",
+      "ko": "한국어",
+      "fil": "Filipino"
+    }
+  },
+  "problem": {
+    "title": "문제점",
+    "description": "유럽 여행 정보 찾기가 흩어져 있고, 느리며, 압도적입니다"
+  },
+  "solution": {
+    "title": "우리의 솔루션",
+    "description": "Ticketrip의 AI 명령 상자를 통해 아시아 여행자들이 유럽의 목적지, 기차, 명소를 즉시 탐색할 수 있습니다"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "AI 기반 검색",
+      "description": "자연어 쿼리가 당신의 여행 의도를 즉시 이해합니다"
+    },
+    "multilingual": {
+      "title": "다국어 지원",
+      "description": "아시아 여행자를 위한 여러 언어로 원활한 경험"
+    },
+    "instant": {
+      "title": "즉시 결과",
+      "description": "몇 시간이 아닌 몇 초 만에 포괄적인 여행 정보를 얻으세요"
+    },
+    "noCommitment": {
+      "title": "부담 없음",
+      "description": "예약 압박 없이 자유롭게 탐색하세요"
+    },
+    "community": {
+      "title": "여행 커뮤니티",
+      "description": "유럽을 탐색하는 10,000명 이상의 아시아 여행자와 함께하세요"
+    },
+    "saveTime": {
+      "title": "시간 절약",
+      "description": "여러 웹사이트에서의 끝없는 검색을 건너뛰세요"
+    }
+  },
+  "keyFeatures": {
+    "title": "스마트 여행 계획을 위해 구축된 핵심 기능",
+    "subtitle": "모든 기능이 아시아 여행자의 유럽 여행 계획을 쉽게 만들도록 설계되었습니다",
+    "aiCommand": {
+      "title": "AI 명령 상자",
+      "description": "목적지, 교통수단, 기간, 예산에 대한 자유 텍스트 검색",
+      "example": "시도해보세요: '500유로 미만의 프라하 로맨틱 주말'"
+    },
+    "leadCapture": {
+      "title": "리드 캡처",
+      "description": "업데이트 및 여행 알림을 위한 선택적 이메일/전화 양식",
+      "subtitle": "검색을 저장하고 맞춤형 업데이트를 받으세요"
+    },
+    "languageToggle": {
+      "title": "언어 전환",
+      "description": "여러 언어 간 원활한 전환",
+      "example": "中文 ⇄ English 한 번의 클릭으로"
+    },
+    "perfectFor": "모든 유형의 여행자에게 완벽",
+    "solo": {
+      "title": "혼자 여행하는 사람",
+      "description": "첫 번째 유럽 모험을 계획하는 독립적인 탐험가에게 완벽",
+      "subtitle": "안전한 지역과 혼자 여행하기 친화적인 명소 찾기"
+    },
+    "families": {
+      "title": "가족",
+      "description": "유럽 전역의 가족 친화적인 명소와 기차 노선 발견",
+      "subtitle": "아이 친화적인 박물관과 쉬운 연결의 기차 노선"
+    },
+    "groups": {
+      "title": "그룹 여행",
+      "description": "친구 그룹과 커플을 위한 다중 도시 여행 계획 조정",
+      "subtitle": "다양한 예산에 맞는 도시 호핑 여행 계획"
+    }
+  },
+  "testimonials": {
+    "title": "아시아 전역 여행자들의 사랑",
+    "rating": "4.9/5",
+    "reviews": "2,847개 리뷰에서",
+    "users": [
+      {
+        "name": "리웨이",
+        "location": "중국 상하이",
+        "initials": "LW",
+        "review": "Ticketrip의 AI 검색이 제 유럽 여행 계획을 쉽고 빠르게 만들었습니다! 존재하는 줄도 몰랐던 기차 노선을 찾았어요."
+      },
+      {
+        "name": "김민준",
+        "location": "한국 서울",
+        "initials": "KM",
+        "review": "마침내 아시아 여행자가 필요로 하는 것을 이해하는 여행 도구입니다. 언어 지원이 완벽해요."
+      },
+      {
+        "name": "다나카 유키",
+        "location": "일본 도쿄",
+        "initials": "TY",
+        "review": "5개 도시 유럽 여행을 계획하는 데 사용했습니다. AI 제안이 정확했고 몇 시간의 연구 시간을 절약했어요."
+      }
+    ]
+  },
+  "trust": {
+    "title": "아시아 전역 여행자들의 신뢰",
+    "subtitle": "자신감을 가지고 유럽을 발견한 수천 명의 만족한 여행자와 함께하세요",
+    "stats": {
+      "travelers": "10,000+",
+      "travelersDesc": "아시아 여행자들이 우리를 신뢰",
+      "useful": "99%",
+      "usefulDesc": "사용자가 검색을 유용하다고 생각",
+      "countries": "27",
+      "countriesDesc": "커버되는 유럽 국가",
+      "rating": "4.9/5",
+      "ratingDesc": "평균 사용자 평점"
+    },
+    "partnerships": "업계 파트너십 및 인정",
+    "partners": {
+      "eurail": {
+        "name": "Eurail",
+        "status": "공식 파트너",
+        "description": "공인 유럽 기차 패스 유통업체"
+      },
+      "etc": {
+        "name": "유럽 관광 위원회",
+        "status": "회원",
+        "description": "유럽 전역의 지속 가능한 여행 촉진"
+      },
+      "traveltech": {
+        "name": "TravelTech Asia",
+        "status": "특집",
+        "description": "여행 기술 혁신 인정"
+      },
+      "gdpr": {
+        "name": "GDPR 인증",
+        "status": "준수",
+        "description": "완전한 유럽 데이터 보호 준수"
+      }
+    },
+    "security": "보안 및 준수",
+    "securityFeatures": {
+      "gdpr": {
+        "title": "GDPR 준수",
+        "description": "유럽 데이터 보호 표준"
+      },
+      "secure": {
+        "title": "안전한 데이터",
+        "description": "모든 사용자 데이터의 종단 간 암호화"
+      },
+      "certified": {
+        "title": "업계 인증",
+        "description": "여행 업계 안전 인증"
+      }
+    }
+  },
+  "footer": {
+    "description": "아시아 여행자를 위해 설계된 AI 기반 유럽 여행 검색. 목적지, 기차 옵션, 명소를 즉시 탐색하세요 - 예약 압박 없이.",
+    "stayUpdated": "업데이트 유지",
+    "emailPlaceholder": "이메일 주소",
+    "subscribe": "구독",
+    "subscribeNote": "여행 팁과 목적지 업데이트를 받으세요. 언제든지 구독 취소.",
+    "quickLinks": "빠른 링크",
+    "support": "지원",
+    "language": "언어:",
+    "copyright": "© 2025 Ticketrip. 모든 권리 보유. 유럽을 탐험하는 아시아 여행자를 위해 구축됨."
+  },
+  "navigation": {
+    "aiSearch": "AI 여행 검색",
+    "howItWorks": "작동 방식",
+    "blog": "여행 블로그",
+    "successStories": "성공 사례",
+    "faq": "자주 묻는 질문",
+    "helpCenter": "도움말 센터",
+    "contact": "문의하기",
+    "privacy": "개인정보 처리방침",
+    "terms": "서비스 약관",
+    "gdprCompliance": "GDPR 준수"
+  }
+}
