@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Sparkles, MapPin, Smartphone, Download, Loader2 } from "lucide-react";
+import { Search, MapPin, Smartphone, Download, Loader2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import heroImage from "@/assets/hero-travel-ai.jpg";
@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   const handleDownloadApp = () => {
-    const apkUrl = "https://github.com/garyyang01/KTV-BTS/releases/download/v0.9.1/Tricketrip.apk";
+    const apkUrl = "https://github.com/garyyang01/KTV-BTS/releases/download/v1.0.0/app-release.apk";
     const link = document.createElement('a');
     link.href = apkUrl;
     link.download = 'Ticketrip.apk';
@@ -33,7 +33,7 @@ const Hero = () => {
     setIsSearchMode(true);
 
     try {
-      const response = await fetch('https://ezzn8n.zeabur.app/webhook/AiSearch', {
+      const response = await fetch('https://n8n.ticketrip.shop/webhook/AiSearch', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,20 +90,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background/50 to-secondary/10" />
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 right-20 animate-float">
-        <div className="glass rounded-lg p-4 text-center">
-          <MapPin className="w-6 h-6 text-primary mx-auto mb-2" />
-          <p className="text-sm text-muted-foreground">Paris</p>
-        </div>
-      </div>
-      
-      <div className="absolute bottom-32 left-20 animate-float" style={{ animationDelay: '2s' }}>
-        <div className="glass rounded-lg p-4 text-center">
-          <Sparkles className="w-6 h-6 text-accent mx-auto mb-2" />
-          <p className="text-sm text-muted-foreground">AI Search</p>
-        </div>
-      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
