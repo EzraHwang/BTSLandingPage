@@ -1,8 +1,8 @@
 {
   "hero": {
     "trustedBy": "10,000명 이상의 아시아 여행자들이 신뢰",
-    "title": "Ticketrip: 유럽 AI 여행 검색",
-    "subtitle": "목적지, 기차 옵션, 명소를 즉시 탐색하세요 - 예약 불필요.",
+    "title": "Ticketrip: AI 여행 티켓 예약",
+    "subtitle": "하나의 질문. 하나의 번들. 필요한 모든 티켓.",
     "searchPlaceholder": "무엇이든 물어보세요: '가족을 위한 파리에서 로마까지 최고의 기차 노선'",
     "tryLabel": "시도해보세요:",
     "tryOptions": {
