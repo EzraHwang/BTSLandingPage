@@ -19,9 +19,9 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Brand Section */}
-            <div className="md:col-span-2">
+            <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
@@ -33,43 +33,12 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h4 className="font-semibold mb-4">{t('footer.quickLinks')}</h4>
-              <div className="space-y-3">
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.howItWorks')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.blog')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.successStories')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.faq')}
-                </a>
-              </div>
-            </div>
-
-            {/* Support */}
+            {/* Privacy Link */}
             <div>
               <h4 className="font-semibold mb-4">{t('footer.support')}</h4>
               <div className="space-y-3">
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.helpCenter')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.contact')}
-                </a>
                 <a href="/privacy" className="block text-muted-foreground hover:text-background transition-colors">
                   {t('navigation.privacy')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.terms')}
-                </a>
-                <a href="#" className="block text-muted-foreground hover:text-background transition-colors">
-                  {t('navigation.gdprCompliance')}
                 </a>
               </div>
             </div>
