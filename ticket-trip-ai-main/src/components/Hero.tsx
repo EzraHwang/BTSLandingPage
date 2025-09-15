@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Sparkles, MapPin } from "lucide-react";
+import { Search, Sparkles, MapPin, Smartphone, Download } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-travel-ai.jpg";
 
@@ -9,6 +9,16 @@ const Hero = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+  };
+
+  const handleDownloadApp = () => {
+    const apkUrl = "https://github.com/garyyang01/KTV-BTS/releases/download/v0.9.1/Tricketrip.apk";
+    const link = document.createElement('a');
+    link.href = apkUrl;
+    link.download = 'Ticketrip.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -97,7 +107,17 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button variant="hero" size="lg" className="min-w-[200px]">
+              <Search className="w-4 h-4 mr-2" />
               {t('hero.startSearch')}
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="min-w-[200px] bg-white/90 text-foreground border-white hover:bg-white hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              onClick={handleDownloadApp}
+            >
+              <Smartphone className="w-4 h-4 mr-2" />
+              {t('hero.downloadApp')}
             </Button>
           </div>
 

@@ -11,7 +11,12 @@
       "family": "파리 가족 명소"
     },
     "startSearch": "AI 여행 검색 시작",
+    "downloadApp": "앱 다운로드",
     "availableIn": "지원 언어:",
+    "appStores": {
+      "appStore": "App Store에서 다운로드",
+      "googlePlay": "Google Play에서 다운로드"
+    },
     "languages": {
       "en": "English",
       "zh": "中文",

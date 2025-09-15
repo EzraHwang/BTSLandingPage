@@ -11,7 +11,12 @@
       "family": "Điểm tham quan gia đình Paris"
     },
     "startSearch": "Bắt đầu Tìm kiếm Du lịch AI",
+    "downloadApp": "Tải Ứng dụng",
     "availableIn": "Có sẵn bằng:",
+    "appStores": {
+      "appStore": "Tải về từ App Store",
+      "googlePlay": "Tải về từ Google Play"
+    },
     "languages": {
       "en": "English",
       "zh": "中文",

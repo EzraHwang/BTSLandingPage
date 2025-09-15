@@ -11,7 +11,12 @@
       "family": "巴黎家庭景點"
     },
     "startSearch": "開始 AI 旅遊搜尋",
+    "downloadApp": "下載應用程式",
     "availableIn": "支援語言：",
+    "appStores": {
+      "appStore": "於 App Store 下載",
+      "googlePlay": "於 Google Play 取得"
+    },
     "languages": {
       "en": "English",
       "zh": "中文",

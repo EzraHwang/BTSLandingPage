@@ -11,7 +11,12 @@
       "family": "Family attractions Paris"
     },
     "startSearch": "Start AI Travel Search",
+    "downloadApp": "Download App",
     "availableIn": "Available in:",
+    "appStores": {
+      "appStore": "Download on the App Store",
+      "googlePlay": "Get it on Google Play"
+    },
     "languages": {
       "en": "English",
       "zh": "中文",
